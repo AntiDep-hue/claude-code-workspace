@@ -17,3 +17,9 @@
 ## 环境说明
 
 使用 CCSwitch + Trae CN 调用 DeepSeek 模型，对话记录需手动保存到仓库。
+
+## 安装 VS Code
+
+- 版本: 1.119.0
+- 路径: `D:\Program Files\Microsoft VS Code`
+- 安装方式: 静默安装到 D 盘（`/VERYSILENT /DIR=...`）
