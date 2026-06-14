@@ -1,0 +1,80 @@
+/* ============================================================
+   数学学习库自定义美化 — 配合 Minimal 主题
+   启用：设置 → 外观 → CSS 代码片段 → 打开 math-study
+   ============================================================ */
+
+/* ---------- 1. Callout 卡片：更柔和的圆角与左侧强调条 ---------- */
+.callout {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin: 1em 0;
+}
+
+/* 题目卡片（question）：醒目的蓝紫色，像试卷题干 */
+.callout[data-callout="question"] {
+  --callout-color: 124, 77, 255;
+  border-left: 4px solid rgb(124, 77, 255);
+}
+
+/* 解答卡片（note）：中性灰蓝，折叠时低调不抢眼 */
+.callout[data-callout="note"] {
+  --callout-color: 68, 138, 255;
+  border-left: 4px solid rgb(68, 138, 255);
+}
+
+/* 原理提示（tip）：温暖的青绿，强调"为什么" */
+.callout[data-callout="tip"] {
+  --callout-color: 0, 191, 165;
+  border-left: 4px solid rgb(0, 191, 165);
+  border-radius: 8px;
+}
+
+/* 最终结果（success）：绿色高亮，一眼定位答案 */
+.callout[data-callout="success"] {
+  --callout-color: 67, 160, 71;
+  border-left: 4px solid rgb(67, 160, 71);
+}
+
+/* ---------- 2. 公式块：居中留白，长公式可横向滚动不挤压 ---------- */
+.math-block,
+mjx-container[display="true"] {
+  padding: 0.3em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 行内公式与正文基线对齐更自然 */
+mjx-container:not([display="true"]) {
+  font-size: 1.02em;
+}
+
+/* ---------- 3. 标题层次：让小节标题更有呼吸感 ---------- */
+.markdown-rendered h2 {
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.2em;
+  margin-top: 1.6em;
+}
+
+/* ---------- 4. 分隔线：替换默认细线为渐隐效果 ---------- */
+.markdown-rendered hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--background-modifier-border),
+    transparent
+  );
+  margin: 2em 0;
+}
+
+/* ---------- 5. 折叠卡片标题：加个手型光标提示可点 ---------- */
+.callout.is-collapsible .callout-title {
+  cursor: pointer;
+}
+
+/* ---------- 6. 代码块（配合 code-styler）轻微圆角 ---------- */
+.markdown-rendered pre {
+  border-radius: 8px;
+}
