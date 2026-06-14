@@ -1,15 +1,15 @@
 [
-  "obsidian-local-rest-api",
-  "obsidian-latex-suite",
-  "obsidian-excalidraw-plugin",
-  "templater-obsidian",
-  "dataview",
-  "obsidian-tasks-plugin",
-  "table-editor-obsidian",
-  "obsidian-git",
-  "obsidian-style-settings",
-  "aosr",
   "number-headings-obsidian",
+  "obsidian-excalidraw-plugin",
+  "table-editor-obsidian",
+  "aosr",
+  "templater-obsidian",
   "code-styler",
-  "obsidian-linter"
+  "dataview",
+  "obsidian-git",
+  "obsidian-latex-suite",
+  "obsidian-linter",
+  "obsidian-tasks-plugin",
+  "obsidian-style-settings",
+  "obsidian-spaced-repetition"
 ]
