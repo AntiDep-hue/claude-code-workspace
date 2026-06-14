@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="sans-serif">
+  <!-- 标题 -->
+  <text x="20" y="26" font-size="14" font-weight="bold" fill="#444">为什么 dS = √(1+zₓ²+z_y²) dσ</text>
+
+  <!-- 底面投影区域 Dxy (平行四边形,代表xoy平面) -->
+  <polygon points="60,250 300,250 360,200 120,200" fill="#eef" stroke="#88a" stroke-width="1.2"/>
+  <text x="320" y="245" font-size="12" fill="#46c">xoy 面</text>
+  <!-- 底面小块 dσ -->
+  <polygon points="170,232 215,232 227,222 182,222" fill="#46c" fill-opacity="0.35" stroke="#46c" stroke-width="1.5"/>
+  <text x="186" y="245" font-size="12" fill="#46c" font-weight="bold">dσ</text>
+
+  <!-- 曲面斜片 dS (抬起+倾斜的小块) -->
+  <polygon points="178,150 223,150 235,134 190,134" fill="#2b7" fill-opacity="0.4" stroke="#2b7" stroke-width="2"/>
+  <text x="236" y="143" font-size="12" fill="#2b7" font-weight="bold">dS (斜片)</text>
+
+  <!-- 投影竖虚线 -->
+  <g stroke="#999" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="178" y1="150" x2="170" y2="232"/>
+    <line x1="223" y1="150" x2="215" y2="232"/>
+    <line x1="235" y1="134" x2="227" y2="222"/>
+    <line x1="190" y1="134" x2="182" y2="222"/>
+  </g>
+
+  <!-- 法向量 n -->
+  <defs>
+    <marker id="ar-r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e77"/>
+    </marker>
+  </defs>
+  <line x1="206" y1="142" x2="248" y2="92" stroke="#e77" stroke-width="2" marker-end="url(#ar-r)"/>
+  <text x="252" y="90" font-size="13" fill="#e77" font-weight="bold">n</text>
+
+  <!-- 夹角 γ 标注 -->
+  <line x1="206" y1="142" x2="206" y2="100" stroke="#aaa" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="210" y="108" font-size="12" fill="#888">γ</text>
+
+  <!-- 关键关系框 -->
+  <text x="20" y="282" font-size="13" fill="#444">斜片比它的影子大，放大倍数 = 1/cos γ = sec γ</text>
+</svg>
