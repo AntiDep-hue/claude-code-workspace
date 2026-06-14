@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 290" font-family="sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#444">斯托克斯：内部小漩涡之和 = 边缘转一圈的环量</text>
+
+  <defs>
+    <marker id="ar-c" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#46c"/>
+    </marker>
+    <marker id="ar-n" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e77"/>
+    </marker>
+  </defs>
+
+  <!-- 曲面 Σ (碗状,用椭圆+曲边) -->
+  <path d="M90,150 Q220,90 350,150 Q330,210 220,225 Q110,210 90,150 Z"
+        fill="#2b7" fill-opacity="0.12" stroke="#2b7" stroke-width="2"/>
+  <text x="345" y="120" font-size="13" fill="#2b7" font-weight="bold">Σ</text>
+
+  <!-- 边界曲线 Γ 上的环绕箭头 -->
+  <g stroke="#46c" stroke-width="2" fill="none">
+    <path d="M150,200 Q110,175 130,150" marker-end="url(#ar-c)"/>
+    <path d="M160,110 Q220,92 285,108" marker-end="url(#ar-c)"/>
+    <path d="M330,150 Q335,185 295,208" marker-end="url(#ar-c)"/>
+    <path d="M270,222 Q220,232 165,218" marker-end="url(#ar-c)"/>
+  </g>
+  <text x="120" y="245" font-size="12" fill="#46c" font-weight="bold">边界 Γ（环量 ∮A·dr）</text>
+
+  <!-- 内部小漩涡(旋度) -->
+  <g stroke="#c5a" stroke-width="1.6" fill="none">
+    <path d="M180,150 a10,10 0 1 1 0.1,0" marker-end="url(#ar-c)" stroke="#c5a"/>
+    <path d="M250,140 a9,9 0 1 1 0.1,0" stroke="#c5a"/>
+    <path d="M215,175 a8,8 0 1 1 0.1,0" stroke="#c5a"/>
+  </g>
+  <text x="160" y="178" font-size="11" fill="#c5a">小漩涡 rot A</text>
+
+  <!-- 法向量 n (右手规则) -->
+  <line x1="220" y1="150" x2="245" y2="105" stroke="#e77" stroke-width="2.3" marker-end="url(#ar-n)"/>
+  <text x="248" y="103" font-size="12" fill="#e77" font-weight="bold">n</text>
+
+  <text x="20" y="280" font-size="12.5" fill="#444">∬_Σ rot A·dS = ∮_Γ A·dr （右手：四指顺 Γ，拇指指 n）</text>
+</svg>
