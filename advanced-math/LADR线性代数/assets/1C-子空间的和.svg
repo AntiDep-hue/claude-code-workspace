@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" font-family="sans-serif">
+  <defs>
+    <marker id="ar-g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/>
+    </marker>
+    <marker id="ar-b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#46c"/>
+    </marker>
+    <marker id="ar-p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c5a"/>
+    </marker>
+  </defs>
+
+  <text x="210" y="28" font-size="14" font-weight="bold" fill="#444" text-anchor="middle">U + W:两条线的元素相加,扫出整个平面</text>
+
+  <!-- 原点 (210,200), 单位 u≈55px -->
+  <!-- 浅色平面底:整张画布即 U+W -->
+  <rect x="30" y="60" width="360" height="250" fill="#f4f0f8"/>
+
+  <!-- 直线 U: 方向 (1,0) 水平 -->
+  <line x1="40" y1="200" x2="380" y2="200" stroke="#2b7" stroke-width="2"/>
+  <text x="360" y="192" font-size="14" fill="#2b7" font-weight="bold">U</text>
+  <!-- 直线 W: 方向 (0,1) 竖直 -->
+  <line x1="210" y1="305" x2="210" y2="70" stroke="#46c" stroke-width="2"/>
+  <text x="218" y="80" font-size="14" fill="#46c" font-weight="bold">W</text>
+
+  <!-- u ∈ U -->
+  <line x1="210" y1="200" x2="320" y2="200" stroke="#2b7" stroke-width="2.5" marker-end="url(#ar-g)"/>
+  <text x="270" y="218" font-size="13" fill="#2b7">u</text>
+  <!-- w ∈ W -->
+  <line x1="210" y1="200" x2="210" y2="118" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <text x="186" y="150" font-size="13" fill="#46c">w</text>
+  <!-- u+w 平行四边形虚线 -->
+  <line x1="320" y1="200" x2="320" y2="118" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="210" y1="118" x2="320" y2="118" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- 和向量 u+w -->
+  <line x1="210" y1="200" x2="320" y2="118" stroke="#c5a" stroke-width="2.5" marker-end="url(#ar-p)"/>
+  <text x="262" y="150" font-size="13" fill="#c5a" font-weight="bold">u+w</text>
+
+  <!-- 原点 -->
+  <circle cx="210" cy="200" r="4.5" fill="#444"/>
+  <text x="195" y="216" font-size="12" fill="#444">0</text>
+
+  <text x="210" y="338" font-size="11" fill="#888" text-anchor="middle">U+W = 含 U 又含 W 的最小子空间;此处恰为整个平面</text>
+</svg>

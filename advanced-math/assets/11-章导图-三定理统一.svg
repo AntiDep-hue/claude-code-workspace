@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="sans-serif">
+  <defs>
+    <marker id="ar-d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+  </defs>
+  <text x="280" y="28" font-size="17" fill="#333" font-weight="bold" text-anchor="middle">三大定理 = 同一招在升维</text>
+  <text x="280" y="50" font-size="12" fill="#888" text-anchor="middle">边界上的积分 = 内部某种"导数"的积分</text>
+
+  <!-- 0维→1维:牛顿莱布尼茨 -->
+  <rect x="30" y="75" width="500" height="62" rx="8" fill="#f6f3fb" stroke="#c5a" stroke-width="1.5"/>
+  <text x="45" y="98" font-size="13" fill="#c5a" font-weight="bold">牛顿-莱布尼茨</text>
+  <text x="45" y="120" font-size="12" fill="#888">区间[a,b] ← 边界是两端点</text>
+  <text x="300" y="112" font-size="13" fill="#333">∫ₐᵇ F'(x)dx = F(b) − F(a)</text>
+
+  <!-- 1维→2维平面:格林 -->
+  <rect x="30" y="150" width="500" height="62" rx="8" fill="#f3fbf6" stroke="#2b7" stroke-width="1.5"/>
+  <text x="45" y="173" font-size="13" fill="#2b7" font-weight="bold">11.3 格林</text>
+  <text x="45" y="195" font-size="12" fill="#888">平面区域D ← 边界是闭曲线L</text>
+  <text x="285" y="187" font-size="12" fill="#333">∬_D(∂Q/∂x−∂P/∂y) = ∮_L Pdx+Qdy</text>
+
+  <!-- 2维曲面→3维:高斯 -->
+  <rect x="30" y="225" width="500" height="62" rx="8" fill="#eef4ff" stroke="#46c" stroke-width="1.5"/>
+  <text x="45" y="248" font-size="13" fill="#46c" font-weight="bold">11.6 高斯</text>
+  <text x="45" y="270" font-size="12" fill="#888">空间体Ω ← 边界是闭曲面Σ</text>
+  <text x="300" y="262" font-size="12" fill="#333">∭_Ω div F dV = ∯_Σ F·dS</text>
+
+  <!-- 斯托克斯 -->
+  <rect x="30" y="300" width="500" height="62" rx="8" fill="#fdf2f2" stroke="#e77" stroke-width="1.5"/>
+  <text x="45" y="323" font-size="13" fill="#e77" font-weight="bold">11.7 斯托克斯</text>
+  <text x="45" y="345" font-size="12" fill="#888">空间曲面Σ ← 边界是闭曲线Γ</text>
+  <text x="300" y="337" font-size="12" fill="#333">∬_Σ curl F·dS = ∮_Γ F·dr</text>
+
+  <!-- 贯穿箭头 -->
+  <line x1="20" y1="137" x2="20" y2="300" stroke="#46c" stroke-width="2" marker-end="url(#ar-d)" stroke-dasharray="5 4"/>
+  <text x="392" y="392" font-size="11" fill="#888" text-anchor="middle">维数升高,招式不变:把内部累积换成边界贡献</text>
+</svg>

@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(git *)",
-      "Bash(gh auth *)",
-      "Bash(winget install *)"
-    ]
-  }
-}

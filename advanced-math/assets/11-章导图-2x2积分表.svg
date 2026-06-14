@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" font-family="sans-serif">
+  <!-- 标题 -->
+  <text x="280" y="28" font-size="17" fill="#333" font-weight="bold" text-anchor="middle">第11章的真身:一张 2×2 表</text>
+  <!-- 列头 -->
+  <text x="200" y="70" font-size="14" fill="#2b7" font-weight="bold" text-anchor="middle">几何对象:曲线 L</text>
+  <text x="430" y="70" font-size="14" fill="#46c" font-weight="bold" text-anchor="middle">几何对象:曲面 Σ</text>
+  <!-- 行头 -->
+  <text x="60" y="150" font-size="13" fill="#c5a" font-weight="bold" text-anchor="middle">第一型</text>
+  <text x="60" y="168" font-size="11" fill="#888" text-anchor="middle">标量·总量</text>
+  <text x="60" y="280" font-size="13" fill="#e77" font-weight="bold" text-anchor="middle">第二型</text>
+  <text x="60" y="298" font-size="11" fill="#888" text-anchor="middle">向量·投影</text>
+  <!-- 四格 -->
+  <rect x="110" y="90" width="180" height="120" rx="8" fill="#f3fbf6" stroke="#2b7" stroke-width="2"/>
+  <text x="200" y="125" font-size="13" fill="#2b7" font-weight="bold" text-anchor="middle">11.1 对弧长</text>
+  <text x="200" y="150" font-size="13" fill="#333" text-anchor="middle">∫_L f ds</text>
+  <text x="200" y="178" font-size="11" fill="#888" text-anchor="middle">曲线的质量</text>
+  <text x="200" y="194" font-size="11" fill="#888" text-anchor="middle">ds = 弧长微元</text>
+
+  <rect x="340" y="90" width="180" height="120" rx="8" fill="#eef4ff" stroke="#46c" stroke-width="2"/>
+  <text x="430" y="125" font-size="13" fill="#46c" font-weight="bold" text-anchor="middle">11.4 对面积</text>
+  <text x="430" y="150" font-size="13" fill="#333" text-anchor="middle">∬_Σ f dS</text>
+  <text x="430" y="178" font-size="11" fill="#888" text-anchor="middle">曲面的质量</text>
+  <text x="430" y="194" font-size="11" fill="#888" text-anchor="middle">dS = 面积微元</text>
+
+  <rect x="110" y="222" width="180" height="120" rx="8" fill="#fdf2f2" stroke="#e77" stroke-width="2"/>
+  <text x="200" y="257" font-size="13" fill="#e77" font-weight="bold" text-anchor="middle">11.2 对坐标</text>
+  <text x="200" y="282" font-size="12" fill="#333" text-anchor="middle">∫_L P dx+Q dy</text>
+  <text x="200" y="310" font-size="11" fill="#888" text-anchor="middle">变力做的功·环量</text>
+  <text x="200" y="326" font-size="11" fill="#888" text-anchor="middle">有方向</text>
+
+  <rect x="340" y="222" width="180" height="120" rx="8" fill="#fdf2f2" stroke="#e77" stroke-width="2"/>
+  <text x="430" y="257" font-size="13" fill="#e77" font-weight="bold" text-anchor="middle">11.5 对坐标</text>
+  <text x="430" y="282" font-size="12" fill="#333" text-anchor="middle">∬_Σ P dydz+…</text>
+  <text x="430" y="310" font-size="11" fill="#888" text-anchor="middle">流过曲面的通量</text>
+  <text x="430" y="326" font-size="11" fill="#888" text-anchor="middle">有方向(法向)</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" font-family="sans-serif">
+  <!-- F^n: tuples -->
+  <rect x="20" y="40" width="120" height="160" rx="8" fill="#eef7f1" stroke="#2b7"/>
+  <text x="80" y="32" font-size="13" fill="#2b7" text-anchor="middle" font-weight="bold">F^n</text>
+  <text x="80" y="115" font-size="13" fill="#333" text-anchor="middle">(x₁,…,xₙ)</text>
+  <text x="80" y="138" font-size="11" fill="#888" text-anchor="middle">长度 n 的组</text>
+  <!-- arrow -->
+  <text x="180" y="125" font-size="20" fill="#888">→</text>
+  <!-- F^S: functions -->
+  <rect x="210" y="40" width="140" height="160" rx="8" fill="#eef2fb" stroke="#46c"/>
+  <text x="280" y="32" font-size="13" fill="#46c" text-anchor="middle" font-weight="bold">F^S</text>
+  <text x="280" y="110" font-size="13" fill="#333" text-anchor="middle">f : S → F</text>
+  <text x="280" y="135" font-size="11" fill="#888" text-anchor="middle">S 上的函数</text>
+  <text x="280" y="160" font-size="11" fill="#888" text-anchor="middle">(f+g)(x)=f(x)+g(x)</text>
+  <!-- note -->
+  <text x="370" y="100" font-size="12" fill="#333">组 = 函数</text>
+  <text x="370" y="120" font-size="11" fill="#888">把 (x₁,…,xₙ)</text>
+  <text x="370" y="138" font-size="11" fill="#888">看成 x:{1,…,n}→F</text>
+  <text x="370" y="156" font-size="11" fill="#888">x(k)=xₖ</text>
+  <text x="20" y="235" font-size="12" fill="#888">向量空间的元素不一定是"组"——也可以是函数、序列等抽象对象</text>
+</svg>

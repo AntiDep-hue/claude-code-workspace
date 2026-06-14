@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" font-family="sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#444"/>
+    </marker>
+    <marker id="ahb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/>
+    </marker>
+  </defs>
+  <!-- grid -->
+  <g stroke="#eee" stroke-width="1">
+    <line x1="60" y1="40" x2="60" y2="320"/><line x1="120" y1="40" x2="120" y2="320"/>
+    <line x1="180" y1="40" x2="180" y2="320"/><line x1="300" y1="40" x2="300" y2="320"/>
+    <line x1="360" y1="40" x2="360" y2="320"/>
+    <line x1="40" y1="80" x2="400" y2="80"/><line x1="40" y1="140" x2="400" y2="140"/>
+    <line x1="40" y1="260" x2="400" y2="260"/><line x1="40" y1="320" x2="400" y2="320"/>
+  </g>
+  <!-- axes -->
+  <line x1="40" y1="200" x2="400" y2="200" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <line x1="240" y1="320" x2="240" y2="40" stroke="#444" stroke-width="1.5" marker-end="url(#ah)"/>
+  <text x="405" y="204" font-size="13" fill="#444">实轴 Re</text>
+  <text x="248" y="50" font-size="13" fill="#444">虚轴 Im</text>
+  <text x="228" y="218" font-size="12" fill="#888">0</text>
+  <!-- point 2+3i  (each unit = 60px; real 2 -> x=240+120=360? too far) use unit 50 -->
+  <!-- recompute: origin (240,200), unit 50px. 2+3i -> x=240+100=340, y=200-150=50 -->
+  <line x1="240" y1="200" x2="340" y2="50" stroke="#2b7" stroke-width="2.5" marker-end="url(#ahb)"/>
+  <circle cx="340" cy="50" r="4" fill="#2b7"/>
+  <text x="346" y="46" font-size="14" fill="#2b7" font-weight="bold">2 + 3i</text>
+  <line x1="340" y1="50" x2="340" y2="200" stroke="#2b7" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="240" y1="50" x2="340" y2="50" stroke="#2b7" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="338" y="215" font-size="12" fill="#2b7">2</text>
+  <text x="222" y="54" font-size="12" fill="#2b7">3</text>
+</svg>

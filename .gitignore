@@ -1,0 +1,46 @@
+# 记忆库 junction（指向 ~/.claude 外部 memory 目录，不应进项目仓库）
+记忆库/
+
+# Claude Code 本机专属配置（权限白名单含本机路径，不跨端）
+.claude/settings.local.json
+
+# 依赖
+node_modules/
+
+# IDE / 编辑器
+.vs/
+.vscode/
+
+# OCR / PPT 等中间产物
+ocr_out/
+pdf_pages/
+ppt_img/
+
+# 大文件 / 安装包 / 二进制文档
+*.exe
+*.docx
+*.pptx
+
+# 误建的嵌套 vault
+Claude code/
+
+# 工具杂项（仅 PC 端需要）
+package.json
+package-lock.json
+gen_ppt.js
+ocr_pages.py
+obs.json
+skills-files-1/
+
+# ---- Obsidian 配置：同步核心，排除易冲突的本地状态 ----
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/workspace
+.obsidian/cache
+.obsidian/.gitignore
+# 插件 main.js 是代码（体积大），移动端启用时会自动下载
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/styles.css
+
+# Local REST API 含本机 apiKey，不可入库
+.obsidian/plugins/obsidian-local-rest-api/data.json

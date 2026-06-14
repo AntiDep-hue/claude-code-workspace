@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 360" font-family="sans-serif">
+  <defs>
+    <marker id="s1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/></marker>
+    <marker id="s2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+    <marker id="s3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e77"/></marker>
+  </defs>
+  <g stroke="#eee" stroke-width="1">
+    <line x1="40" y1="80" x2="400" y2="80"/><line x1="40" y1="140" x2="400" y2="140"/>
+    <line x1="40" y1="260" x2="400" y2="260"/>
+    <line x1="100" y1="40" x2="100" y2="320"/><line x1="280" y1="40" x2="280" y2="320"/>
+    <line x1="340" y1="40" x2="340" y2="320"/>
+  </g>
+  <!-- origin (220,200), unit 40 -->
+  <line x1="40" y1="200" x2="400" y2="200" stroke="#444" stroke-width="1.5" marker-end="url(#s1)"/>
+  <line x1="220" y1="320" x2="220" y2="40" stroke="#444" stroke-width="1.5" marker-end="url(#s1)"/>
+  <text x="208" y="216" font-size="12" fill="#888">0</text>
+  <!-- v=(1,1)=(260,160); 2v=(2,2)=(300,120); -v=(-1,-1)=(180,240) -->
+  <!-- 2v (draw first, behind) -->
+  <line x1="220" y1="200" x2="300" y2="120" stroke="#46c" stroke-width="3" marker-end="url(#s2)"/>
+  <text x="305" y="118" font-size="13" fill="#46c" font-weight="bold">2v</text>
+  <!-- v -->
+  <line x1="220" y1="200" x2="260" y2="160" stroke="#2b7" stroke-width="3" marker-end="url(#s1)"/>
+  <text x="262" y="158" font-size="13" fill="#2b7" font-weight="bold">v</text>
+  <!-- -v -->
+  <line x1="220" y1="200" x2="180" y2="240" stroke="#e77" stroke-width="3" marker-end="url(#s3)"/>
+  <text x="140" y="252" font-size="13" fill="#e77" font-weight="bold">-v</text>
+  <text x="40" y="350" font-size="12" fill="#888">标量乘法 = 沿同一直线缩放(负数则反向)</text>
+</svg>
