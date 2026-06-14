@@ -1,15 +1,17 @@
 [
-  "number-headings-obsidian",
-  "obsidian-excalidraw-plugin",
-  "table-editor-obsidian",
-  "aosr",
-  "templater-obsidian",
-  "code-styler",
-  "dataview",
-  "obsidian-git",
+  "obsidian-local-rest-api",
   "obsidian-latex-suite",
-  "obsidian-linter",
+  "obsidian-excalidraw-plugin",
+  "templater-obsidian",
+  "dataview",
   "obsidian-tasks-plugin",
+  "table-editor-obsidian",
+  "obsidian-git",
   "obsidian-style-settings",
-  "obsidian-spaced-repetition"
+  "aosr",
+  "number-headings-obsidian",
+  "code-styler",
+  "obsidian-linter",
+  "darlal-switcher-plus",
+  "calendar"
 ]
