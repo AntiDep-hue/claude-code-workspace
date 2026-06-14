@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 290" font-family="sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#444">∬ R dxdy：投影到 xoy 面，靠 cosγ 的正负定号</text>
+
+  <defs>
+    <marker id="ar-up" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/>
+    </marker>
+    <marker id="ar-dn" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e77"/>
+    </marker>
+  </defs>
+
+  <!-- ===== 上半:取上侧(法向朝上,cosγ>0,取+) ===== -->
+  <text x="30" y="55" font-size="13" fill="#2b7" font-weight="bold">取上侧：n 朝上，cosγ&gt;0 → ∬R dxdy = +∬R dσ</text>
+  <!-- 曲面片 -->
+  <polygon points="120,90 200,78 230,108 150,120" fill="#2b7" fill-opacity="0.2" stroke="#2b7" stroke-width="1.8"/>
+  <!-- 法向朝上 -->
+  <line x1="178" y1="98" x2="200" y2="68" stroke="#2b7" stroke-width="2.3" marker-end="url(#ar-up)"/>
+  <text x="203" y="66" font-size="12" fill="#2b7" font-weight="bold">n</text>
+  <!-- 投影到底面 -->
+  <polygon points="120,150 200,138 230,150 150,162" fill="#46c" fill-opacity="0.25" stroke="#46c" stroke-width="1.2"/>
+  <g stroke="#bbb" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="120" y1="90" x2="120" y2="150"/>
+    <line x1="230" y1="108" x2="230" y2="150"/>
+  </g>
+  <text x="300" y="125" font-size="12" fill="#888">影子记 +dσ</text>
+
+  <!-- 分隔 -->
+  <line x1="20" y1="180" x2="440" y2="180" stroke="#eee" stroke-width="1"/>
+
+  <!-- ===== 下半:取下侧(法向朝下,cosγ<0,取-) ===== -->
+  <text x="30" y="205" font-size="13" fill="#e77" font-weight="bold">取下侧：n 朝下，cosγ&lt;0 → ∬R dxdy = −∬R dσ</text>
+  <polygon points="120,235 200,223 230,253 150,265" fill="#e77" fill-opacity="0.18" stroke="#e77" stroke-width="1.8"/>
+  <line x1="172" y1="245" x2="150" y2="278" stroke="#e77" stroke-width="2.3" marker-end="url(#ar-dn)"/>
+  <text x="135" y="284" font-size="12" fill="#e77" font-weight="bold">n</text>
+  <text x="300" y="252" font-size="12" fill="#888">影子记 −dσ</text>
+</svg>
