@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" font-family="sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#444">级数收敛 = 部分和 s_n 越加越靠近一个数 s</text>
+
+  <defs>
+    <marker id="ax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- 坐标轴 -->
+  <line x1="55" y1="250" x2="430" y2="250" stroke="#444" stroke-width="1.5" marker-end="url(#ax)"/>
+  <line x1="55" y1="260" x2="55" y2="55" stroke="#444" stroke-width="1.5" marker-end="url(#ax)"/>
+  <text x="435" y="254" font-size="12" fill="#444">n</text>
+  <text x="38" y="62" font-size="12" fill="#444">s_n</text>
+
+  <!-- 极限线 s -->
+  <line x1="55" y1="90" x2="420" y2="90" stroke="#e77" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="388" y="84" font-size="12" fill="#e77" font-weight="bold">和 s</text>
+
+  <!-- 部分和散点(越来越靠近s) -->
+  <g fill="#46c">
+    <circle cx="90" cy="210" r="4"/>
+    <circle cx="135" cy="150" r="4"/>
+    <circle cx="180" cy="120" r="4"/>
+    <circle cx="225" cy="105" r="4"/>
+    <circle cx="270" cy="98" r="4"/>
+    <circle cx="315" cy="94" r="4"/>
+    <circle cx="360" cy="92" r="4"/>
+    <circle cx="405" cy="91" r="4"/>
+  </g>
+  <!-- 折线连起来 -->
+  <polyline points="90,210 135,150 180,120 225,105 270,98 315,94 360,92 405,91"
+            fill="none" stroke="#46c" stroke-width="1.3" opacity="0.6"/>
+
+  <text x="80" y="228" font-size="11" fill="#46c">s₁</text>
+  <text x="128" y="168" font-size="11" fill="#46c">s₂</text>
+  <text x="320" y="110" font-size="11" fill="#46c">s_n→s</text>
+
+  <text x="20" y="286" font-size="12.5" fill="#444">s_n = u₁+…+u_n；若 lim s_n = s 存在，级数收敛于 s，否则发散</text>
+</svg>

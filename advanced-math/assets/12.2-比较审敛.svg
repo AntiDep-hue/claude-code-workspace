@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 280" font-family="sans-serif">
+  <text x="20" y="24" font-size="14" font-weight="bold" fill="#444">比较审敛法：拿一把"已知标尺"去夹它</text>
+
+  <defs>
+    <marker id="cax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- 上图:大的收敛 => 小的收敛 -->
+  <text x="20" y="52" font-size="12.5" fill="#2b7" font-weight="bold">若 uₙ ≤ vₙ 且大的 ∑vₙ 收敛 → 小的 ∑uₙ 也收敛</text>
+  <g stroke="#e77" stroke-width="1.5">
+    <line x1="40" y1="115" x2="40" y2="68" marker-end="url(#cax)" stroke="#e77"/>
+    <line x1="80" y1="115" x2="80" y2="80" marker-end="url(#cax)" stroke="#e77"/>
+    <line x1="120" y1="115" x2="120" y2="90" marker-end="url(#cax)" stroke="#e77"/>
+    <line x1="160" y1="115" x2="160" y2="98" marker-end="url(#cax)" stroke="#e77"/>
+  </g>
+  <g stroke="#2b7" stroke-width="3">
+    <line x1="48" y1="115" x2="48" y2="92"/>
+    <line x1="88" y1="115" x2="88" y2="98"/>
+    <line x1="128" y1="115" x2="128" y2="103"/>
+    <line x1="168" y1="115" x2="168" y2="107"/>
+  </g>
+  <line x1="30" y1="115" x2="200" y2="115" stroke="#444" stroke-width="1"/>
+  <text x="210" y="84" font-size="11" fill="#e77">vₙ（大，收敛）</text>
+  <text x="210" y="108" font-size="11" fill="#2b7">uₙ（小，被压住）</text>
+
+  <!-- 下图:小的发散 => 大的发散 -->
+  <text x="20" y="160" font-size="12.5" fill="#e77" font-weight="bold">若 uₙ ≥ vₙ 且小的 ∑vₙ 发散 → 大的 ∑uₙ 也发散</text>
+  <g stroke="#46c" stroke-width="1.5">
+    <line x1="40" y1="235" x2="40" y2="200" marker-end="url(#cax)" stroke="#46c"/>
+    <line x1="80" y1="235" x2="80" y2="205" marker-end="url(#cax)" stroke="#46c"/>
+    <line x1="120" y1="235" x2="120" y2="208" marker-end="url(#cax)" stroke="#46c"/>
+  </g>
+  <g stroke="#e77" stroke-width="3">
+    <line x1="48" y1="235" x2="48" y2="180"/>
+    <line x1="88" y1="235" x2="88" y2="188"/>
+    <line x1="128" y1="235" x2="128" y2="193"/>
+  </g>
+  <line x1="30" y1="235" x2="200" y2="235" stroke="#444" stroke-width="1"/>
+  <text x="210" y="196" font-size="11" fill="#e77">uₙ（更大，必发散）</text>
+  <text x="210" y="222" font-size="11" fill="#46c">vₙ（小，已发散→∞）</text>
+
+  <text x="20" y="268" font-size="11.5" fill="#888">标尺常取 几何级数 或 p-级数；极限形式：看 lim uₙ/vₙ 是否为有限正数</text>
+</svg>
