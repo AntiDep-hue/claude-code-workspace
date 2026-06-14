@@ -1,4 +1,7 @@
 {
   "theme": "moonstone",
-  "cssTheme": "Minimal"
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "math-study"
+  ]
 }
