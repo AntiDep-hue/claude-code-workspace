@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" font-family="sans-serif">
+  <defs>
+    <marker id="ar-c" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c5a"/></marker>
+    <marker id="ar-b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+  </defs>
+  <text x="210" y="26" font-size="14" font-weight="bold" fill="#444" text-anchor="middle">右手规则:Γ 走向 ↔ Σ 法向 绑定</text>
+
+  <!-- 曲面 Σ:椭圆膜 -->
+  <ellipse cx="210" cy="180" rx="120" ry="48" fill="#f3e8f5" stroke="#c5a" stroke-width="2.5"/>
+  <text x="210" y="186" font-size="14" fill="#c5a" font-weight="bold" text-anchor="middle">Σ</text>
+
+  <!-- 边界 Γ 上的逆时针方向箭头(四指弯曲方向) -->
+  <g stroke="#c5a" stroke-width="2.5" fill="none">
+    <path d="M330,180 A120,48 0 0 1 270,221" marker-end="url(#ar-c)"/>
+    <path d="M150,221 A120,48 0 0 1 90,180" marker-end="url(#ar-c)"/>
+    <path d="M90,180 A120,48 0 0 1 150,139" marker-end="url(#ar-c)"/>
+    <path d="M270,139 A120,48 0 0 1 330,180" marker-end="url(#ar-c)"/>
+  </g>
+  <text x="348" y="184" font-size="13" fill="#c5a">Γ 走向</text>
+
+  <!-- 法向 n:从面心竖直向上(拇指) -->
+  <line x1="210" y1="178" x2="210" y2="70" stroke="#46c" stroke-width="3" marker-end="url(#ar-b)"/>
+  <circle cx="210" cy="178" r="4" fill="#46c"/>
+  <text x="222" y="100" font-size="14" fill="#46c" font-weight="bold">n (拇指)</text>
+
+  <text x="210" y="262" font-size="12.5" fill="#888" text-anchor="middle">右手四指顺 Γ 弯,拇指所指即 n</text>
+  <text x="210" y="282" font-size="12.5" fill="#e77" text-anchor="middle">方向定反 → 等式整体反号</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" font-family="sans-serif">
+  <defs>
+    <marker id="ar-r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e77"/></marker>
+    <marker id="ar-b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+  </defs>
+  <text x="210" y="26" font-size="14" font-weight="bold" fill="#444" text-anchor="middle">旋度 = 每点的「小漩涡」(向量)</text>
+
+  <!-- 流场中放一个小风车 -->
+  <!-- 漩涡:逆时针圆弧箭头 -->
+  <g stroke="#e77" stroke-width="2.5" fill="none">
+    <path d="M270,170 A60,60 0 0 1 215,228" marker-end="url(#ar-r)"/>
+    <path d="M150,170 A60,60 0 0 1 205,112" marker-end="url(#ar-r)"/>
+  </g>
+  <path d="M150,170 A60,60 0 0 0 205,228" stroke="#e77" stroke-width="2.5" fill="none" opacity="0.4"/>
+  <path d="M270,170 A60,60 0 0 0 215,112" stroke="#e77" stroke-width="2.5" fill="none" opacity="0.4"/>
+
+  <!-- 小风车 -->
+  <g stroke="#444" stroke-width="2">
+    <line x1="210" y1="170" x2="210" y2="140"/>
+    <line x1="210" y1="170" x2="236" y2="185"/>
+    <line x1="210" y1="170" x2="184" y2="185"/>
+  </g>
+  <circle cx="210" cy="170" r="5" fill="#444"/>
+  <text x="244" y="206" font-size="12" fill="#888">小风车转得最快</text>
+
+  <!-- 旋度向量:沿转轴(右手螺旋),向上 -->
+  <line x1="210" y1="170" x2="210" y2="62" stroke="#46c" stroke-width="3" marker-end="url(#ar-b)"/>
+  <text x="222" y="92" font-size="14" fill="#46c" font-weight="bold">rot A</text>
+
+  <text x="210" y="256" font-size="12.5" fill="#888" text-anchor="middle">方向 = 转轴(右手螺旋) ｜ 大小 = 转得多猛</text>
+  <text x="210" y="278" font-size="12.5" fill="#444" text-anchor="middle">rot A = ∇ × A (叉乘,出向量)</text>
+</svg>
