@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" font-family="sans-serif">
+  <defs>
+    <marker id="ar-r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#e77"/></marker>
+    <marker id="ar-b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#46c"/></marker>
+  </defs>
+  <text x="240" y="26" font-size="14" font-weight="bold" fill="#444" text-anchor="middle">为什么内部全消、只剩表面</text>
+
+  <!-- 立体切成小格 -->
+  <g stroke="#46c" stroke-width="1.5" fill="#eef3fc">
+    <rect x="120" y="70" width="80" height="80"/>
+    <rect x="200" y="70" width="80" height="80"/>
+    <rect x="280" y="70" width="80" height="80"/>
+    <rect x="120" y="150" width="80" height="80"/>
+    <rect x="200" y="150" width="80" height="80"/>
+    <rect x="280" y="150" width="80" height="80"/>
+  </g>
+
+  <!-- 内部公共面:相邻两格的法向相反,一对箭头此消彼长 -->
+  <!-- 竖内壁1 x=200 -->
+  <line x1="190" y1="110" x2="178" y2="110" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="210" y1="110" x2="222" y2="110" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <line x1="190" y1="190" x2="178" y2="190" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="210" y1="190" x2="222" y2="190" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <!-- 竖内壁2 x=280 -->
+  <line x1="270" y1="110" x2="258" y2="110" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="290" y1="110" x2="302" y2="110" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <line x1="270" y1="190" x2="258" y2="190" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="290" y1="190" x2="302" y2="190" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <!-- 横内壁 y=150 -->
+  <line x1="160" y1="140" x2="160" y2="128" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="160" y1="160" x2="160" y2="172" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <line x1="240" y1="140" x2="240" y2="128" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="240" y1="160" x2="240" y2="172" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+  <line x1="320" y1="140" x2="320" y2="128" stroke="#e77" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  <line x1="320" y1="160" x2="320" y2="172" stroke="#46c" stroke-width="2.5" marker-end="url(#ar-b)"/>
+
+  <!-- 内壁上一层渐隐遮罩,做"相消"动画 -->
+  <rect x="118" y="68" width="244" height="164" fill="#fff" opacity="0">
+    <animate attributeName="opacity" values="0;0;0.82" keyTimes="0;0.45;1" dur="3s" fill="freeze"/>
+  </rect>
+  <!-- 相消后保留:整体外边界 + 外法向 -->
+  <rect x="120" y="70" width="240" height="160" fill="none" stroke="#2b7" stroke-width="3" opacity="0">
+    <animate attributeName="opacity" values="0;0;1" keyTimes="0;0.5;1" dur="3s" fill="freeze"/>
+  </rect>
+  <g opacity="0"><animate attributeName="opacity" values="0;0;1" keyTimes="0;0.55;1" dur="3s" fill="freeze"/>
+    <line x1="240" y1="70" x2="240" y2="50" stroke="#2b7" stroke-width="2.5" marker-end="url(#ar-r)"/>
+    <line x1="360" y1="150" x2="382" y2="150" stroke="#2b7" stroke-width="2.5" marker-end="url(#ar-r)"/>
+    <line x1="240" y1="230" x2="240" y2="252" stroke="#2b7" stroke-width="2.5" marker-end="url(#ar-r)"/>
+    <line x1="120" y1="150" x2="98" y2="150" stroke="#2b7" stroke-width="2.5" marker-end="url(#ar-r)"/>
+  </g>
+
+  <text x="240" y="284" font-size="12.5" fill="#888" text-anchor="middle">相邻小格的公共内壁:法向相反、流量大小相等 → 两两抵消</text>
+  <text x="240" y="304" font-size="12.5" fill="#444" text-anchor="middle">Σ 内部偏导之和(∭div) 累加后只剩最外层表面通量(∯)</text>
+</svg>
