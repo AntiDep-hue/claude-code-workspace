@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 270" font-family="sans-serif">
+  <defs>
+    <marker id="ax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+  <text x="230" y="24" font-size="14" font-weight="bold" fill="#444" text-anchor="middle">通项 → 0,级数却可能发散</text>
+
+  <line x1="50" y1="210" x2="430" y2="210" stroke="#444" stroke-width="1.3" marker-end="url(#ax)"/>
+  <line x1="50" y1="218" x2="50" y2="55" stroke="#444" stroke-width="1.3" marker-end="url(#ax)"/>
+  <text x="435" y="214" font-size="12" fill="#444">n</text>
+
+  <!-- 通项 1/n 柱:越来越矮趋于0 -->
+  <g fill="#2b7" opacity="0.85">
+    <rect x="70"  y="90"  width="18" height="120"/>
+    <rect x="100" y="150" width="18" height="60"/>
+    <rect x="130" y="170" width="18" height="40"/>
+    <rect x="160" y="180" width="18" height="30"/>
+    <rect x="190" y="186" width="18" height="24"/>
+    <rect x="220" y="190" width="18" height="20"/>
+    <rect x="250" y="193" width="18" height="17"/>
+    <rect x="280" y="195" width="18" height="15"/>
+    <rect x="310" y="197" width="18" height="13"/>
+  </g>
+  <text x="80" y="84" font-size="11" fill="#2b7">u_n=1/n → 0 ✓</text>
+
+  <!-- 部分和折线:仍缓慢爬升不止 -->
+  <polyline points="79,170 109,150 139,138 169,130 199,124 229,119 259,115 289,112 319,109 360,100"
+            fill="none" stroke="#e77" stroke-width="2"/>
+  <text x="328" y="98" font-size="11" fill="#e77">s_n 仍往上爬 → ∞ ✗</text>
+
+  <text x="230" y="240" font-size="12.5" fill="#444" text-anchor="middle">调和级数 ∑1/n:每项缩小,但加起来无界 → 发散</text>
+  <text x="230" y="258" font-size="11.5" fill="#888" text-anchor="middle">所以 lim u_n=0 只是必要条件,不能据此判收敛</text>
+</svg>
