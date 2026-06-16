@@ -48,15 +48,40 @@ coastal hills, peaceful harvest mood, cinematic wide-angle landscape, warm tones
 ## 第6页 · 背景音乐（AI音乐）
 **平台**：Suno AI
 **保存为**：`assets/sanmen_music.mp3`（**30-50秒**，超长需在剪映裁剪）
+**曲名**：《鲜甜三门》｜ 选 Instrumental（纯器乐）
 
-**风格提示词（英文，Suno用）**：
+> 升级说明：原"seaside folk"过泛，改用浙东地域基因（东海渔歌/舟山渔民号子/舟山锣鼓/江南丝竹）。
+> 下面4套填进 Suno 的 **Style 框**，按需选；**推荐方案A**。
+
+**方案A · 江南海洋民乐（最贴题，推荐）**
 ```
-bright cheerful seaside folk, light acoustic guitar and marimba, gentle ocean
-wave ambience, festive harvest mood, Chinese coastal town vibe, instrumental,
-upbeat but warm, 40 seconds
+Chinese coastal folk instrumental, East China Sea fishing-village mood, bright and festive harvest celebration, dizi bamboo flute and erhu leading the melody, guzheng and pipa accents, light bamboo percussion and wood blocks, gentle ocean wave ambience, warm and uplifting, moderate tempo, cinematic, 40 seconds
 ```
-**曲名**：《鲜甜三门》
-**说明**：纯器乐即可（做背景乐），如要人声可加歌词描述青蟹丰收。生成后裁到30-50秒。
+核心乐器：笛子dizi、二胡erhu、古筝guzheng、琵琶pipa（江南丝竹标配）
+
+**方案B · 舟山锣鼓气势版（适合开场3秒引子）**
+```
+Traditional Chinese coastal festival music, Zhoushan fisherman gong-and-drum style, energetic gongs cymbals and drums, suona and dizi over the top, evoking ocean waves and returning fishing boats, powerful and celebratory, building rhythm, instrumental, 40 seconds
+```
+
+**方案C · 轻快现代国风（铺背景最安全）**
+```
+Modern Chinese folk fusion, light and cheerful, dizi flute and guzheng melody over soft acoustic guitar and marimba, subtle modern beat, ocean breeze ambience, fresh seaside town vibe, warm major key, steady relaxed tempo, instrumental, 40 seconds
+```
+
+**方案D · 抒情温暖版（对应蟹宴收尾镜头）**
+```
+Warm gentle Chinese instrumental, slow lyrical East China Sea folk melody, solo dizi and erhu, soft guzheng, light strings, tender and heartwarming, family reunion harvest feast mood, slow tempo, cinematic and emotional, instrumental, 40 seconds
+```
+
+### ⚠️ 下载方式（重要）
+Suno 免费版下载 MP3/WAV 要会员。**不绕付费墙**，改用录屏录音（录自己生成的内容自用）：
+1. 浏览器打开 Suno 播放页
+2. **Win + G** 开 Xbox Game Bar → 关掉麦克风（只录桌面/系统声）
+3. 点录制 → 切回去播放 Suno → 放完停止（存到「视频\捕获」.mp4）
+4. mp4 拖进剪映 → 裁到40秒 → 导出「仅音频/MP3」→ 存为 `assets/sanmen_music.mp3`
+- Game Bar 录不到声就用 OBS 加「音频输出采集」同理。
+- Win 自带录音机只能录麦克风，录不到机内声，不能用。
 
 ---
 
