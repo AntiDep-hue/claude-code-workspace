@@ -50,6 +50,35 @@ function crabIcon(s, cx, cy, scale, color) {
   s.addShape(p.ShapeType.chord, { x: cx + 0.2*u, y: cy + 0.05*u, w: 0.7*u, h: 0.5*u,
     fill: { color: color || ACCENT }, angleRange: [20, 160] });
 }
+// 气泡装饰（海洋主题，散布一组半透明圆）
+function bubbles(s, x, y, count, maxR, color, alpha) {
+  for (let i = 0; i < count; i++) {
+    const r = 0.06 + Math.random() * (maxR || 0.18);
+    const bx = x + Math.random() * 2.4 - 0.3;
+    const by = y + Math.random() * 1.6 - 0.2;
+    s.addShape(p.ShapeType.ellipse, { x: bx, y: by, w: r * 2, h: r * 2,
+      fill: { type: "none" }, line: { color: color || TEAL, width: 0.8, transparency: alpha == null ? 65 : alpha } });
+  }
+}
+// 海藻装饰（用小椭圆串模拟水草形态）
+function seaweed(s, x, y, h, color, alpha) {
+  const c = color || TEAL, a = alpha == null ? 55 : alpha;
+  const segments = Math.floor(h / 0.22);
+  for (let i = 0; i < segments; i++) {
+    const sway = (i % 2 === 0 ? 0.1 : -0.1) * (1 + i * 0.15);
+    s.addShape(p.ShapeType.ellipse, { x: x + sway, y: y - i * 0.22, w: 0.18, h: 0.32,
+      fill: { color: c, transparency: a }, rotate: sway > 0 ? 15 : -15 });
+  }
+}
+// 浪花飞溅装饰（小三角形簇，模拟浪尖白沫）
+function spray(s, x, y, count, color, alpha) {
+  const c = color || "FFFFFF", a = alpha == null ? 70 : alpha;
+  for (let i = 0; i < count; i++) {
+    const sx = x + i * 0.28, sy = y + (i % 2) * 0.12;
+    s.addShape(p.ShapeType.triangle, { x: sx, y: sy, w: 0.14, h: 0.18,
+      fill: { color: c, transparency: a }, rotate: i * 30 });
+  }
+}
 // 占位卡片：图片素材待回填时的视觉占位（精致化设计位）
 function placeholder(s, x, y, w, h, label, hint, icon) {
   // 主体卡片：深色填充 + 实线描边 + 内层细框，制造层次
@@ -63,6 +92,12 @@ function placeholder(s, x, y, w, h, label, hint, icon) {
     fontSize: 11, color: DARK, bold: true, align: "center", valign: "middle" });
   // 底部波浪装饰
   waves(s, x + 0.5, y + h - 0.95, w - 1.0, 2, TEAL, 60);
+  // 海洋装饰：气泡 + 海藻 + 浪花飞溅
+  bubbles(s, x + 0.3, y + 0.8, 5, 0.15, TEAL, 60);
+  bubbles(s, x + w - 1.2, y + h - 1.8, 4, 0.12, ACCENT, 55);
+  seaweed(s, x + 0.55, y + h - 1.1, 1.1, TEAL, 50);
+  if (w > 4) seaweed(s, x + w - 0.65, y + h - 1.0, 0.9, "1A6B5A", 55);
+  spray(s, x + w * 0.3, y + h - 0.75, 4, "FFFFFF", 75);
   // 中部图标（蟹钳 / 相机 / 影片，按类型）
   const cx = x + w/2, cy = y + h/2 - 0.55;
   if (icon === "crab") crabIcon(s, cx, cy, 0.95, ACCENT);
@@ -105,6 +140,12 @@ s.addText(C.cover.tagline, { x: 1.3, y: 4.75, w: 7.8, h: 0.6, fontFace: FONT,
   fontSize: 18, color: GOLD, charSpacing: 3 });
 s.addText(C.cover.meta.join("    |    "), { x: 1.3, y: 6.6, w: 7.8, h: 0.5,
   fontFace: FONT, fontSize: 13, color: SUB });
+// 封面海洋装饰：左下气泡+海藻，底部浪花
+bubbles(s, 0.3, 5.8, 6, 0.2, TEAL, 55);
+bubbles(s, 1.5, 6.2, 3, 0.12, ACCENT, 60);
+seaweed(s, 0.6, 7.3, 1.3, TEAL, 45);
+seaweed(s, 1.1, 7.1, 1.0, "1A6B5A", 50);
+spray(s, 2.5, 6.95, 5, GOLD, 70);
 
 // ============ P2 主题介绍 & 宣传文案 ============
 s = p.addSlide(); bg(s, BG);
@@ -127,6 +168,10 @@ C.intro.points.forEach(pt => {
     fontSize: 15, color: TEXT, bold: true, valign: "middle" });
   py += 1.05;
 });
+// P2 底部海浪装饰
+waves(s, 0.5, 6.85, 12.3, 2, TEAL, 65);
+spray(s, 10.5, 6.7, 4, "FFFFFF", 70);
+bubbles(s, 11.0, 5.5, 3, 0.1, TEAL, 60);
 
 // ============ P3 数据图表（柱状+折线组合）============
 s = p.addSlide(); bg(s, BG);
@@ -163,6 +208,9 @@ C.chart.facts.forEach(f => {
 // 数据来源脚注
 s.addText(C.chart.note, { x: 0.9, y: 6.05, w: 11.9, h: 1.1, fontFace: FONT,
   fontSize: 9.5, color: SUB, italic: true, valign: "top", lineSpacingMultiple: 1.1 });
+// P3 底部海浪装饰
+waves(s, 0.5, 7.1, 12.3, 1, TEAL, 70);
+bubbles(s, 11.5, 1.5, 3, 0.1, ACCENT, 65);
 
 // ============ P4 AI特写图 ============
 s = p.addSlide(); bg(s, BG);
@@ -180,6 +228,9 @@ s.addText(C.closeup.caption, { x: 8.7, y: 3.3, w: 4.0, h: 1.6, fontFace: FONT,
   fontSize: 15, color: TEXT, lineSpacingMultiple: 1.3, valign: "top" });
 s.addText("生成工具：" + C.closeup.tool, { x: 8.7, y: 6.2, w: 4.0, h: 0.5, fontFace: FONT,
   fontSize: 12, color: SUB, italic: true });
+// P4 海洋装饰
+bubbles(s, 9.0, 4.5, 4, 0.12, TEAL, 60);
+waves(s, 0.5, 7.0, 7.5, 1, TEAL, 70);
 
 // ============ P5 AI场景氛围图 ============
 s = p.addSlide(); bg(s, BG);
@@ -196,6 +247,9 @@ s.addText(C.scene.caption, { x: 0.9, y: 6.2, w: 9.5, h: 0.6, fontFace: FONT,
   fontSize: 18, color: "FFFFFF", bold: true });
 s.addText("生成工具：" + C.scene.tool, { x: 0.9, y: 6.85, w: 9, h: 0.4, fontFace: FONT,
   fontSize: 11, color: SUB, italic: true });
+// P5 海洋装饰
+bubbles(s, 10.5, 5.5, 5, 0.15, TEAL, 55);
+spray(s, 0.9, 5.9, 4, "FFFFFF", 75);
 
 // ============ P6 AI音乐信息卡（嵌入音频）============
 s = p.addSlide(); bg(s, BG);
@@ -232,6 +286,9 @@ if (fs.existsSync(audioFile)) {
   s.addText("🔊 " + C.music.audioNote, { x: 6.0, y: 6.2, w: 6.6, h: 0.7, fontFace: FONT,
     fontSize: 11, color: ACCENT, valign: "middle" });
 }
+// P6 海洋装饰
+waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
+bubbles(s, 0.4, 5.8, 3, 0.1, TEAL, 60);
 
 // ============ P7 分镜画面（表格 ≥6镜头）============
 s = p.addSlide(); bg(s, BG);
@@ -246,6 +303,9 @@ s.addTable([tHead, ...tRows], { x: 0.7, y: 1.5, w: 11.93, h: 4.3,
   rowH: [0.5, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62] });
 s.addText(C.storyboard.note, { x: 0.7, y: 6.1, w: 11.9, h: 0.5, fontFace: FONT,
   fontSize: 12, color: SUB, italic: true });
+// P7 海洋装饰
+waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
+spray(s, 11.0, 6.85, 3, "FFFFFF", 75);
 
 // ============ P8 短视频成片（嵌入视频）============
 s = p.addSlide(); bg(s, BG);
@@ -263,6 +323,9 @@ if (fs.existsSync(videoFile)) {
 }
 s.addText("制作：" + C.video.tool, { x: 2.4, y: 6.55, w: 8.5, h: 0.5, fontFace: FONT,
   fontSize: 13, color: SUB, italic: true, align: "center" });
+// P8 海洋装饰
+waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
+bubbles(s, 0.4, 5.0, 4, 0.12, TEAL, 60);
 
 // ============ P9 人机协同总结 ============
 s = p.addSlide(); bg(s, BG);
@@ -279,6 +342,9 @@ s.addTable([cHead, ...cRows], { x: 0.9, y: 1.75, w: 11.5, h: 3.5,
 s.addShape(p.ShapeType.rect, { x: 0.9, y: 5.45, w: 11.5, h: 1.3, fill: { color: BG2 }, line: { color: ACCENT, width: 1 } });
 s.addText(C.collab.summary, { x: 1.15, y: 5.55, w: 11.0, h: 1.1, fontFace: FONT,
   fontSize: 14, color: TEXT, valign: "middle", lineSpacingMultiple: 1.25 });
+// P9 海洋装饰
+waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
+bubbles(s, 11.5, 5.0, 3, 0.1, ACCENT, 65);
 
 // ============ P10 创作反思 ============
 s = p.addSlide(); bg(s, BG);
@@ -292,6 +358,10 @@ C.reflect.blocks.forEach(b => {
     fontSize: 13.5, color: TEXT, lineSpacingMultiple: 1.25, valign: "top" });
   ry += 1.85;
 });
+// P10 海洋装饰
+waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
+spray(s, 2.0, 6.85, 5, GOLD, 70);
+bubbles(s, 0.3, 5.8, 3, 0.1, TEAL, 60);
 
 p.writeFile({ fileName: __dirname + "/三门青蟹宣传汇报_v1.pptx" })
   .then(fn => console.log("已生成:", fn))
