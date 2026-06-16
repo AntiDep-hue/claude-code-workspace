@@ -1,40 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 372" font-family="sans-serif">
   <defs>
     <marker id="ar-d" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#444"/></marker>
   </defs>
-  <text x="240" y="24" font-size="13.5" font-weight="bold" fill="#444" text-anchor="middle">侧视(沿 y 轴看)：曲面变陡，yz 向影子按 z_x 倍长出来</text>
 
-  <!-- 坐标轴:x水平 z竖直 -->
-  <line x1="90" y1="250" x2="445" y2="250" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
-  <text x="450" y="254" font-size="12" fill="#444">x</text>
-  <line x1="120" y1="250" x2="120" y2="55" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
-  <text x="108" y="66" font-size="12" fill="#444">z</text>
+  <!-- 本图演算：点名对应的公式行 -->
+  <rect x="24" y="8" width="472" height="30" rx="5" fill="#fdf6e3" stroke="#d9b14a" stroke-width="1"/>
+  <text x="260" y="22" font-size="11.5" fill="#9a7b1a" text-anchor="middle" font-weight="bold">本图演算的是（§六 tip 公式）：</text>
+  <text x="260" y="34" font-size="12.5" fill="#7a5d0a" text-anchor="middle" font-weight="bold">dy dz = (−z_x) dx dy   ← 看 dx 不变、dz 随曲面变陡而长高</text>
 
-  <!-- 浅斜位置的虚影(静态参考,暂停也看得到对比) -->
-  <line x1="170" y1="170" x2="320" y2="150" stroke="#bbb" stroke-width="2" stroke-dasharray="5 4"/>
-  <text x="324" y="150" font-size="10.5" fill="#bbb">浅</text>
+  <text x="260" y="58" font-size="13" font-weight="bold" fill="#444" text-anchor="middle">侧视图（沿 y 轴看进去）：x 水平、z 竖直</text>
 
-  <!-- xy 向影子 dx:始终不变,贴在 x 轴上 -->
-  <line x1="170" y1="250" x2="320" y2="250" stroke="#e77" stroke-width="4"/>
-  <line x1="170" y1="170" x2="170" y2="250" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 3"/>
-  <line x1="320" y1="170" x2="320" y2="250" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 3">
-    <animate attributeName="y1" from="150" to="78" dur="2.6s" fill="freeze"/>
+  <!-- 坐标轴 -->
+  <line x1="90" y1="290" x2="475" y2="290" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
+  <text x="480" y="294" font-size="12" fill="#444">x</text>
+  <line x1="120" y1="290" x2="120" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
+  <text x="107" y="92" font-size="12" fill="#444">z</text>
+  <text x="106" y="304" font-size="11" fill="#444">O</text>
+
+  <!-- 浅斜位置的虚影:静态对照,曲面较平时 -->
+  <line x1="185" y1="200" x2="330" y2="168" stroke="#bbb" stroke-width="2.5" stroke-dasharray="5 4"/>
+  <text x="336" y="170" font-size="10.5" fill="#999">曲面较平时</text>
+  <text x="336" y="183" font-size="10.5" fill="#999">(z_x 小,作对照)</text>
+
+  <!-- 基准水平虚线:左端高度,用来量 dz -->
+  <line x1="185" y1="200" x2="352" y2="200" stroke="#ccc" stroke-width="0.9" stroke-dasharray="3 3"/>
+
+  <!-- xy 向影子 dx:贴 x 轴,始终不变 -->
+  <line x1="185" y1="290" x2="330" y2="290" stroke="#e44" stroke-width="4"/>
+  <line x1="185" y1="200" x2="185" y2="290" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 3"/>
+  <line x1="330" y1="200" x2="330" y2="290" stroke="#aaa" stroke-width="0.8" stroke-dasharray="3 3">
+    <animate attributeName="y1" from="168" to="92" dur="2.6s" fill="freeze"/>
   </line>
-  <text x="245" y="268" font-size="12" fill="#e77" font-weight="bold" text-anchor="middle">dx (xy 向影子，不变)</text>
+  <text x="257" y="308" font-size="12" fill="#e44" font-weight="bold" text-anchor="middle">dx：dS 在 xy 面的影子宽</text>
+  <text x="257" y="322" font-size="10.5" fill="#e44" text-anchor="middle">(= |dx dy| 的那条边，曲面变陡它不变)</text>
 
-  <!-- 曲面元:左端钉在(170,170),右端抬高变陡 -->
-  <line x1="170" y1="170" x2="320" y2="150" stroke="#2b7" stroke-width="4">
-    <animate attributeName="y2" from="150" to="78" dur="2.6s" fill="freeze"/>
+  <!-- 曲面元 dS:左端钉在(185,200),右端抬高变陡 -->
+  <line x1="185" y1="200" x2="330" y2="168" stroke="#2b7" stroke-width="4">
+    <animate attributeName="y2" from="168" to="92" dur="2.6s" fill="freeze"/>
   </line>
-  <circle cx="170" cy="170" r="4" fill="#2b7"/>
-  <text x="196" y="150" font-size="12.5" fill="#2b7" font-weight="bold">曲面元 dS</text>
+  <circle cx="185" cy="200" r="4" fill="#2b7"/>
+  <text x="150" y="150" font-size="12.5" fill="#1a9a5a" font-weight="bold">曲面元 dS</text>
+  <text x="150" y="164" font-size="10.5" fill="#1a9a5a">(z=z(x,y) 沿 y 看的侧影)</text>
 
-  <!-- yz 向影子 dz:竖直方向,随变陡而长 -->
-  <line x1="335" y1="170" x2="335" y2="150" stroke="#46c" stroke-width="4">
-    <animate attributeName="y2" from="150" to="78" dur="2.6s" fill="freeze"/>
+  <!-- yz 向影子 dz:竖直,随变陡而长 -->
+  <line x1="352" y1="200" x2="352" y2="168" stroke="#36c" stroke-width="4">
+    <animate attributeName="y2" from="168" to="92" dur="2.6s" fill="freeze"/>
   </line>
-  <text x="345" y="120" font-size="12" fill="#46c" font-weight="bold">dz = z_x·dx</text>
-  <text x="345" y="138" font-size="11" fill="#46c">(yz 向影子)</text>
+  <text x="362" y="128" font-size="12.5" fill="#36c" font-weight="bold">dz = z_x·dx</text>
+  <text x="362" y="142" font-size="10.5" fill="#36c">dS 在 yz 面的影子高</text>
+  <text x="362" y="156" font-size="10.5" fill="#36c">(曲面越陡，它越长)</text>
 
-  <text x="240" y="290" font-size="12.5" fill="#444" text-anchor="middle">dx 固定，dz 正比于斜率 z_x ⟹ |dydz| = z_x·|dxdy|，定号给负号：dydz = (−z_x)dxdy</text>
+  <text x="260" y="350" font-size="12.5" fill="#444" text-anchor="middle">dx 固定、dz 正比于斜率 z_x ⟹ |dy dz| = z_x·|dx dy|</text>
+  <text x="260" y="366" font-size="12.5" fill="#444" text-anchor="middle">再按上侧定号补负号，得 dy dz = (−z_x) dx dy</text>
 </svg>
