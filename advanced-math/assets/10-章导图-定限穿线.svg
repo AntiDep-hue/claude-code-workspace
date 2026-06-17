@@ -1,0 +1,48 @@
+<svg viewBox="0 0 460 380" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="ar-b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+    <marker id="ar-d" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <rect x="8" y="6" width="444" height="46" rx="5" fill="#f4f6fb" stroke="#ccd"/>
+  <text x="20" y="26" font-size="13" fill="#333" font-weight="bold">本图演算：定 X 型区域的限</text>
+  <text x="20" y="44" font-size="13" fill="#333">∫∫_D f dσ = ∫_a^b [ ∫_{y₁(x)}^{y₂(x)} f dy ] dx</text>
+
+  <!-- 坐标轴 -->
+  <line x1="50" y1="330" x2="440" y2="330" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
+  <line x1="70" y1="350" x2="70" y2="80" stroke="#444" stroke-width="1.5" marker-end="url(#ar-d)"/>
+  <text x="432" y="350" font-size="13" fill="#444">x</text>
+  <text x="54" y="92" font-size="13" fill="#444">y</text>
+
+  <!-- 区域 D：下边 y1=抛物线弧，上边 y2=直线 -->
+  <!-- a=130(x), b=360(x); 取u=单位，画弧 -->
+  <path d="M130,300 Q245,335 360,250 L360,150 Q245,120 130,200 Z" fill="#dff0e6" stroke="#2b7" stroke-width="2"/>
+  <text x="235" y="240" font-size="15" fill="#2b7" font-weight="bold">D</text>
+
+  <!-- 下边界 y1(x) 标注 -->
+  <text x="150" y="320" font-size="12.5" fill="#e77" font-weight="bold">入口 y₁(x)（下限）</text>
+  <!-- 上边界 y2(x) 标注 -->
+  <text x="150" y="150" font-size="12.5" fill="#46c" font-weight="bold">出口 y₂(x)（上限）</text>
+
+  <!-- 投影 [a,b] -->
+  <line x1="130" y1="330" x2="360" y2="330" stroke="#c5a" stroke-width="4"/>
+  <line x1="130" y1="330" x2="130" y2="318" stroke="#c5a" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <line x1="360" y1="330" x2="360" y2="318" stroke="#c5a" stroke-width="1.5" stroke-dasharray="3 2"/>
+  <text x="124" y="348" font-size="13" fill="#c5a" font-weight="bold">a</text>
+  <text x="356" y="348" font-size="13" fill="#c5a" font-weight="bold">b</text>
+  <text x="200" y="362" font-size="12" fill="#c5a">投影定外限 a≤x≤b（常数）</text>
+
+  <!-- 穿线：在 x=x0 处竖线，从 y1 穿到 y2，带动画生长 -->
+  <line x1="250" y1="330" x2="250" y2="125" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="240" y="346" font-size="12" fill="#666">x</text>
+  <line x1="250" y1="326" x2="250" y2="124" stroke="#e6a23c" stroke-width="3"
+        stroke-dasharray="202" stroke-dashoffset="202" marker-end="url(#ar-b)">
+    <animate attributeName="stroke-dashoffset" from="202" to="0" dur="2s" fill="freeze"/>
+  </line>
+  <circle cx="250" cy="326" r="4" fill="#e77"/>
+  <circle cx="250" cy="124" r="4" fill="#46c"/>
+  <text x="262" y="300" font-size="11.5" fill="#e77">穿线进 D：下限 y₁</text>
+  <text x="262" y="135" font-size="11.5" fill="#46c">穿线出 D：上限 y₂</text>
+
+  <text x="50" y="378" font-size="11" fill="#888">竖线只穿 D 一次 → X 型；跟着橙线从下往上，读出内层 y 的下/上限</text>
+</svg>

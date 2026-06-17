@@ -1,0 +1,54 @@
+<svg viewBox="0 0 460 360" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="ard" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <rect x="8" y="6" width="444" height="46" rx="5" fill="#f4f6fb" stroke="#ccd"/>
+  <text x="20" y="26" font-size="13" fill="#333" font-weight="bold">本图演算：曲顶柱体体积 = 小块体积累加取极限</text>
+  <text x="20" y="44" font-size="13" fill="#333">V = lim Σ f(ξ,η)·Δσ = ∫∫_D f(x,y) dσ</text>
+
+  <!-- 底面 D（透视成平行四边形） -->
+  <polygon points="70,300 300,300 360,250 130,250" fill="#eef" stroke="#46c" stroke-width="1.5"/>
+  <text x="200" y="292" font-size="12.5" fill="#46c">底面 D（分成小块 Δσ）</text>
+
+  <!-- 网格分块线 -->
+  <g stroke="#9ad" stroke-width="0.8">
+    <line x1="127" y1="300" x2="187" y2="250"/>
+    <line x1="184" y1="300" x2="244" y2="250"/>
+    <line x1="241" y1="300" x2="301" y2="250"/>
+    <line x1="100" y1="275" x2="330" y2="275"/>
+  </g>
+
+  <!-- 小立柱（高 = f 在该块的值），逐根从底"长"到曲顶，体现累加 -->
+  <!-- 柱1 -->
+  <g>
+    <rect x="100" y="200" width="27" height="80" fill="#9fd9b6" stroke="#2b7" stroke-width="1">
+      <animate attributeName="height" from="0" to="80" dur="1.6s" fill="freeze"/>
+      <animate attributeName="y" from="280" to="200" dur="1.6s" fill="freeze"/>
+    </rect>
+  </g>
+  <!-- 柱2 -->
+  <g>
+    <rect x="157" y="170" width="27" height="105" fill="#9fd9b6" stroke="#2b7" stroke-width="1">
+      <animate attributeName="height" from="0" to="105" dur="1.6s" begin="0.3s" fill="freeze"/>
+      <animate attributeName="y" from="275" to="170" dur="1.6s" begin="0.3s" fill="freeze"/>
+    </rect>
+  </g>
+  <!-- 柱3 -->
+  <g>
+    <rect x="214" y="185" width="27" height="88" fill="#9fd9b6" stroke="#2b7" stroke-width="1">
+      <animate attributeName="height" from="0" to="88" dur="1.6s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="y" from="273" to="185" dur="1.6s" begin="0.6s" fill="freeze"/>
+    </rect>
+  </g>
+
+  <text x="120" y="150" font-size="12" fill="#2b7" font-weight="bold">高 ≈ f(ξ,η)</text>
+  <line x1="170" y1="155" x2="172" y2="170" stroke="#2b7" stroke-width="1"/>
+
+  <!-- 曲顶曲面（z=f(x,y)）轮廓 -->
+  <path d="M95,180 Q175,135 255,165 Q300,182 300,182" fill="none" stroke="#e77" stroke-width="2.5"/>
+  <text x="305" y="178" font-size="13" fill="#e77" font-weight="bold">曲顶 z=f(x,y)</text>
+
+  <text x="50" y="335" font-size="11.5" fill="#888">每根立柱 = f(ξ,η)·Δσ；块越分越细，累加和 → 真实曲顶柱体体积（取极限）</text>
+  <text x="50" y="352" font-size="11.5" fill="#888">这正是二重积分的定义：和式取极限</text>
+</svg>
