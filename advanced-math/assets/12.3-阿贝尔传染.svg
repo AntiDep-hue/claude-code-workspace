@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" font-family="sans-serif">
+  <rect x="0" y="0" width="480" height="30" fill="#eef3fb"/>
+  <text x="14" y="20" font-size="13" fill="#36c" font-weight="bold">本图演算：阿贝尔定理 — 在 x₀ 收敛 ⟹ |x|&lt;|x₀| 全绝对收敛</text>
+
+  <defs>
+    <marker id="abx" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <!-- 数轴 -->
+  <line x1="30" y1="150" x2="455" y2="150" stroke="#444" stroke-width="1.5" marker-end="url(#abx)"/>
+  <text x="232" y="170" font-size="12" fill="#444">0</text>
+  <circle cx="240" cy="150" r="3" fill="#444"/>
+
+  <!-- 收敛半径分界 ±R -->
+  <line x1="120" y1="70" x2="120" y2="150" stroke="#e77" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <line x1="360" y1="70" x2="360" y2="150" stroke="#e77" stroke-width="1.4" stroke-dasharray="5 3"/>
+  <text x="108" y="64" font-size="12" fill="#e77" font-weight="bold">−R</text>
+  <text x="352" y="64" font-size="12" fill="#e77" font-weight="bold">R</text>
+
+  <!-- 收敛区(绿,从中心生长) -->
+  <rect x="240" y="138" width="0" height="24" fill="#5b5" opacity="0.28">
+    <animate attributeName="x" from="240" to="120" dur="1.4s" fill="freeze"/>
+    <animate attributeName="width" from="0" to="240" dur="1.4s" fill="freeze"/>
+  </rect>
+  <text x="178" y="128" font-size="12" fill="#3a3" font-weight="bold" text-anchor="middle">|x|&lt;R 绝对收敛</text>
+
+  <!-- 已知收敛点 x₀ -->
+  <circle cx="330" cy="150" r="4.5" fill="#36c"/>
+  <text x="318" y="190" font-size="12" fill="#36c" font-weight="bold">x₀ 收敛</text>
+  <line x1="330" y1="150" x2="330" y2="180" stroke="#36c" stroke-width="1"/>
+
+  <!-- 传染箭头:x₀ 向原点方向传染 -->
+  <path d="M325,205 Q255,225 175,205" fill="none" stroke="#36c" stroke-width="1.4" marker-end="url(#abx)" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.0s" dur="0.6s" fill="freeze"/>
+  </path>
+  <text x="250" y="240" font-size="11.5" fill="#36c" text-anchor="middle">收敛"传染"给更靠近 0 的所有点</text>
+
+  <!-- 发散区标注 -->
+  <text x="75" y="128" font-size="11.5" fill="#a55">|x|&gt;R 发散</text>
+  <text x="405" y="128" font-size="11.5" fill="#a55" text-anchor="middle">发散</text>
+</svg>

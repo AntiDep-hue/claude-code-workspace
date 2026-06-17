@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+  <rect x="0" y="0" width="480" height="30" fill="#eef3fb"/>
+  <text x="14" y="20" font-size="13" fill="#36c" font-weight="bold">本图演算：例1 ∑(−1)ⁿ⁻¹xⁿ/n 求收敛域 → (−1,1]</text>
+
+  <!-- 第1步:比值求ρ -->
+  <text x="20" y="58" font-size="12.5" fill="#444">① 比值求 ρ：</text>
+  <text x="110" y="58" font-size="12.5" fill="#46c">ρ = lim |aₙ₊₁/aₙ| = lim n/(n+1) = 1</text>
+  <!-- 第2步:R -->
+  <text x="20" y="84" font-size="12.5" fill="#444">② 收敛半径：</text>
+  <text x="110" y="84" font-size="12.5" fill="#46c" font-weight="bold">R = 1/ρ = 1</text>
+
+  <defs>
+    <marker id="r1x" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <!-- 数轴 -->
+  <line x1="40" y1="150" x2="445" y2="150" stroke="#444" stroke-width="1.5" marker-end="url(#r1x)"/>
+  <text x="237" y="170" font-size="12" fill="#444">0</text>
+  <circle cx="240" cy="150" r="3" fill="#444"/>
+
+  <!-- 收敛区间(-1,1) 绿 -->
+  <rect x="120" y="139" width="240" height="22" fill="#5b5" opacity="0.26"/>
+  <text x="240" y="128" font-size="12" fill="#3a3" font-weight="bold" text-anchor="middle">③ 收敛区间 (−R,R)=(−1,1)</text>
+
+  <!-- 端点 x=1 收敛(实心) -->
+  <circle cx="360" cy="150" r="5" fill="#3a3"/>
+  <text x="356" y="142" font-size="12" fill="#444">1</text>
+  <text x="300" y="205" font-size="11.5" fill="#3a3">x=1: ∑(−1)ⁿ⁻¹/n</text>
+  <text x="300" y="222" font-size="11.5" fill="#3a3" font-weight="bold">莱布尼茨→收敛 ●</text>
+  <line x1="360" y1="150" x2="360" y2="190" stroke="#3a3" stroke-width="1"/>
+
+  <!-- 端点 x=-1 发散(空心) -->
+  <circle cx="120" cy="150" r="5" fill="#fff" stroke="#a55" stroke-width="1.6"/>
+  <text x="104" y="142" font-size="12" fill="#444">−1</text>
+  <text x="40" y="205" font-size="11.5" fill="#a55">x=−1: ∑(−1)/n</text>
+  <text x="40" y="222" font-size="11.5" fill="#a55" font-weight="bold">调和→发散 ○</text>
+  <line x1="120" y1="150" x2="120" y2="190" stroke="#a55" stroke-width="1"/>
+
+  <!-- 结论 -->
+  <text x="240" y="270" font-size="13.5" fill="#36c" font-weight="bold" text-anchor="middle">④ 收敛域 = (−1, 1]　（左端开、右端闭）</text>
+</svg>

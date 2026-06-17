@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+  <rect x="0" y="0" width="480" height="30" fill="#eef3fb"/>
+  <text x="14" y="20" font-size="12.5" fill="#36c" font-weight="bold">本图演算：例6　x·s(x)=∫₀ˣ 1/(1−t) dt = −ln(1−x)</text>
+
+  <defs>
+    <marker id="e6x" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <!-- 坐标轴 -->
+  <line x1="55" y1="250" x2="445" y2="250" stroke="#444" stroke-width="1.5" marker-end="url(#e6x)"/>
+  <line x1="55" y1="260" x2="55" y2="55" stroke="#444" stroke-width="1.5" marker-end="url(#e6x)"/>
+  <text x="448" y="254" font-size="12" fill="#444">t</text>
+  <text x="30" y="64" font-size="12" fill="#444">y</text>
+  <text x="42" y="254" font-size="11" fill="#444">0</text>
+  <text x="350" y="268" font-size="11" fill="#46c">x</text>
+  <line x1="360" y1="250" x2="360" y2="120" stroke="#46c" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- 被积函数曲线 1/(1-t) 在[0,x]上升 -->
+  <path d="M55,210 C160,205 250,190 320,160 L360,120" fill="none" stroke="#36c" stroke-width="2"/>
+  <text x="300" y="100" font-size="12" fill="#36c" font-weight="bold">y = 1/(1−t)</text>
+  <text x="310" y="116" font-size="11" fill="#36c">=∑ tⁿ (|t|&lt;1)</text>
+
+  <!-- 面积填充(从左生长) -->
+  <clipPath id="grow"><rect x="55" y="50" width="0" height="200"><animate attributeName="width" from="0" to="305" dur="2.2s" fill="freeze"/></rect></clipPath>
+  <path d="M55,250 L55,210 C160,205 250,190 320,160 L360,120 L360,250 Z" fill="#46c" opacity="0.22" clip-path="url(#grow)"/>
+  <text x="200" y="235" font-size="12" fill="#2a6" font-weight="bold">阴影面积 = ∫₀ˣ1/(1−t)dt</text>
+
+  <!-- 逐项积分对应关系 -->
+  <text x="60" y="285" font-size="11.5" fill="#444">逐项积分：∫₀ˣ∑tⁿdt = ∑ xⁿ⁺¹/(n+1) = x·s(x) ⟹ s(x) = −ln(1−x)/x</text>
+</svg>

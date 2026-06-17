@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+  <rect x="0" y="0" width="480" height="30" fill="#eef3fb"/>
+  <text x="14" y="20" font-size="12.5" fill="#36c" font-weight="bold">本图演算：sinx = x − x³/3! + x⁵/5! − ⋯ 部分和逐条逼近</text>
+
+  <defs>
+    <marker id="sx" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+
+  <!-- 轴 -->
+  <line x1="30" y1="165" x2="455" y2="165" stroke="#444" stroke-width="1.4" marker-end="url(#sx)"/>
+  <line x1="240" y1="285" x2="240" y2="50" stroke="#444" stroke-width="1.4" marker-end="url(#sx)"/>
+  <text x="448" y="183" font-size="12" fill="#444">x</text>
+  <text x="248" y="60" font-size="12" fill="#444">y</text>
+
+  <!-- 真曲线 sinx (灰,基准) 振幅~70 周期映射 -->
+  <path d="M40,165 C90,60 150,60 200,165 C250,270 310,270 360,165 C390,103 420,90 445,110"
+        fill="none" stroke="#999" stroke-width="2.4"/>
+  <text x="150" y="78" font-size="12" fill="#777" font-weight="bold">y = sin x（基准）</text>
+
+  <!-- p1 = x 直线(过原点斜线,仅原点附近贴合) -->
+  <line x1="150" y1="290" x2="330" y2="40" stroke="#e77" stroke-width="1.6" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/>
+  </line>
+  <text x="120" y="285" font-size="11.5" fill="#e77">p₁=x</text>
+
+  <!-- p3 = x - x³/3! 红橙,贴合更宽 -->
+  <path d="M70,250 C120,150 180,120 240,165 C300,210 360,180 410,80"
+        fill="none" stroke="#e94" stroke-width="1.8" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.5s" fill="freeze"/>
+  </path>
+  <text x="60" y="240" font-size="11.5" fill="#e94" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.1s" dur="0.5s" fill="freeze"/>p₃=x−x³/3!</text>
+
+  <!-- p5 蓝,几乎贴住 -->
+  <path d="M48,168 C92,68 150,62 200,163 C250,266 308,268 358,167 C388,107 418,96 442,114"
+        fill="none" stroke="#36c" stroke-width="1.8" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.6s" fill="freeze"/>
+  </path>
+  <text x="300" y="250" font-size="11.5" fill="#36c" font-weight="bold" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.9s" dur="0.6s" fill="freeze"/>p₅=x−x³/3!+x⁵/5! 已几乎重合</text>
+
+  <text x="20" y="298" font-size="11" fill="#444">项越多，贴合区间越宽——R=+∞ 时全轴收敛于 sinx</text>
+</svg>
