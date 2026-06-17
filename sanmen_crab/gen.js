@@ -346,6 +346,12 @@ waves(s, 0.5, 7.05, 12.3, 1, TEAL, 70);
 spray(s, 2.0, 6.85, 5, GOLD, 70);
 bubbles(s, 0.3, 5.8, 3, 0.1, TEAL, 60);
 
+// ============ 各页备注栏（演讲者备注）：作业要求的 工具+提示词+人工修改 标注 ============
+p.slides.forEach((slide, i) => {
+  const note = C.notes && C.notes[i + 1];
+  if (note) slide.addNotes(note);
+});
+
 p.writeFile({ fileName: __dirname + "/三门青蟹宣传汇报_v2.pptx" })
   .then(fn => console.log("已生成:", fn))
   .catch(e => console.error("出错:", e));
