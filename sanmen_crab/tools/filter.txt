@@ -1,0 +1,10 @@
+color=c=0x0E2A3B:s=1280x720:r=24:d=2.5,drawtext=fontfile='C\:/Windows/Fonts/msyhbd.ttc':textfile=t_main.txt:fontcolor=0xF4C95D:fontsize=68:x=(w-text_w)/2:y=(h-text_h)/2-40,drawtext=fontfile='C\:/Windows/Fonts/msyh.ttc':textfile=t_sub.txt:fontcolor=0xF0F4F5:fontsize=34:x=(w-text_w)/2:y=(h-text_h)/2+60,format=yuv420p,setsar=1[title];
+color=c=0x0E2A3B:s=1280x720:r=24:d=2.5,drawtext=fontfile='C\:/Windows/Fonts/msyhbd.ttc':textfile=end_main.txt:fontcolor=0xF4C95D:fontsize=64:x=(w-text_w)/2:y=(h-text_h)/2-30,drawtext=fontfile='C\:/Windows/Fonts/msyh.ttc':textfile=end_sub.txt:fontcolor=0xF2A65A:fontsize=40:x=(w-text_w)/2:y=(h-text_h)/2+55,format=yuv420p,setsar=1[end];
+[0:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v0];
+[1:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v1];
+[2:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v2];
+[3:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v3];
+[4:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v4];
+[5:v]scale=-2:720,pad=1280:720:(ow-iw)/2:(oh-ih)/2:0x0E2A3B,fps=24,format=yuv420p,setsar=1[v5];
+[title][v0][v1][v2][v3][v4][v5][end]concat=n=8:v=1:a=0[outv];
+[6:a]atrim=0:33.25,asetpts=PTS-STARTPTS,afade=t=out:st=31.25:d=2[outa]
