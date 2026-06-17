@@ -1,0 +1,42 @@
+<svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="pd" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker>
+    <marker id="po" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e6a23c"/></marker>
+  </defs>
+
+  <rect x="8" y="6" width="424" height="44" rx="5" fill="#f4f6fb" stroke="#ccd"/>
+  <text x="18" y="25" font-size="12.5" fill="#333" font-weight="bold">本图演算（极坐标定限）：∫∫_D f dσ = ∫_α^β [ ∫_{φ₁(θ)}^{φ₂(θ)} f·ρ dρ ] dθ</text>
+  <text x="18" y="42" font-size="12.5" fill="#333">面积元 dσ = ρ dρ dθ（那个 ρ 来自扇环小块）</text>
+
+  <!-- 极点 O 在 (70,280) -->
+  <line x1="70" y1="280" x2="420" y2="280" stroke="#444" stroke-width="1.4" marker-end="url(#pd)"/>
+  <text x="412" y="298" font-size="12" fill="#444">A (极轴)</text>
+  <circle cx="70" cy="280" r="3" fill="#444"/>
+  <text x="58" y="296" font-size="12" fill="#444">O</text>
+
+  <!-- 两条边界射线 θ=α, θ=β -->
+  <!-- α=20°, β=70° -->
+  <line x1="70" y1="280" x2="390" y2="163" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="70" y1="280" x2="180" y2="78" stroke="#888" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="300" y="205" font-size="12" fill="#888">θ=α</text>
+  <text x="150" y="95" font-size="12" fill="#888">θ=β</text>
+
+  <!-- 扇形区域 D：内边界 φ1(θ) 弧, 外边界 φ2(θ) 弧 -->
+  <!-- 内弧 r1=90: α点(70+90cos20,280-90sin20)=(154,249); β点(70+90cos70,280-90sin70)=(101,195)
+       外弧 r2=230: α点(70+230cos20,280-230sin20)=(286,201); β点(70+230cos70,280-230sin70)=(149,64) -->
+  <path d="M154,249 A90,90 0 0,0 101,195 L149,64 A230,230 0 0,1 286,201 Z"
+        fill="#dff0e6" stroke="#2b7" stroke-width="2"/>
+  <text x="180" y="180" font-size="15" fill="#2b7" font-weight="bold">D</text>
+
+  <text x="95" y="240" font-size="11.5" fill="#46c" font-weight="bold">ρ=φ₁(θ) 内（下限）</text>
+  <text x="210" y="120" font-size="11.5" fill="#e77" font-weight="bold">ρ=φ₂(θ) 外（上限）</text>
+
+  <!-- 穿线: 沿 θ=45° 射线, ρ 从内弧到外弧
+       θ=45: 内 r=90:(70+63.6,280-63.6)=(134,216); 外 r=230:(70+162.6,280-162.6)=(233,117) -->
+  <line x1="138" y1="212" x2="225" y2="125" stroke="#e6a23c" stroke-width="3" marker-end="url(#po)"/>
+  <circle cx="134" cy="216" r="3.5" fill="#46c"/>
+  <circle cx="233" cy="117" r="3.5" fill="#e77"/>
+  <text x="185" y="175" font-size="11" fill="#e6a23c" font-weight="bold">沿射线 ρ 增大</text>
+
+  <text x="40" y="335" font-size="10.5" fill="#888">固定 θ，沿射线从内弧穿到外弧→定 ρ 限；θ 扫过 [α,β]→定 θ 限。先 ρ 后 θ</text>
+</svg>

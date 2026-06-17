@@ -1,0 +1,48 @@
+<svg viewBox="0 0 460 340" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="bd" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker>
+    <marker id="bo" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e6a23c"/></marker>
+  </defs>
+
+  <rect x="8" y="6" width="444" height="44" rx="5" fill="#f4f6fb" stroke="#ccd"/>
+  <text x="18" y="25" font-size="12.5" fill="#333" font-weight="bold">本图演算（例3，Y型最省事）：∫∫_D xy dσ = ∫₋₁² [ ∫_{y²}^{y+2} xy dx ] dy</text>
+  <text x="18" y="42" font-size="12.5" fill="#333">D：由抛物线 y²=x 与直线 y=x−2 围成</text>
+
+  <!-- 轴: ox=110, oy=200, u=55 -->
+  <line x1="60" y1="200" x2="440" y2="200" stroke="#444" stroke-width="1.4" marker-end="url(#bd)"/>
+  <line x1="110" y1="320" x2="110" y2="70" stroke="#444" stroke-width="1.4" marker-end="url(#bd)"/>
+  <text x="432" y="218" font-size="12" fill="#444">x</text>
+  <text x="96" y="82" font-size="12" fill="#444">y</text>
+
+  <!-- 区域 D：抛物线 x=y², 直线 x=y+2, y∈[-1,2]
+       点: y=-1: 抛物x=1(165,255) 线x=1(165,255) 交点(1,-1)
+            y=2: 抛物x=4(330,90) 线x=4(330,90) 交点(4,2)
+       抛物线左边界, 直线右边界 -->
+  <path d="M165,255 Q110,200 121,145 Q140,90 330,90 Z" fill="#dff0e6" stroke="none"/>
+  <!-- 抛物线 x=y² (左/下边界) -->
+  <path d="M165,255 Q96,200 121,145 Q126,118 330,90" fill="none" stroke="#46c" stroke-width="2"/>
+  <!-- 直线 x=y+2 (右/上边界) -->
+  <line x1="165" y1="255" x2="330" y2="90" stroke="#e77" stroke-width="2"/>
+  <text x="225" y="160" font-size="15" fill="#2b7" font-weight="bold">D</text>
+
+  <text x="60" y="150" font-size="12" fill="#46c" font-weight="bold">x=y²（左：内层下限）</text>
+  <text x="300" y="120" font-size="12" fill="#e77" font-weight="bold">x=y+2（右：内层上限）</text>
+  <text x="335" y="88" font-size="11" fill="#888">(4,2)</text>
+  <text x="168" y="270" font-size="11" fill="#888">(1,−1)</text>
+
+  <!-- 投影到 y 轴 [-1,2] -->
+  <line x1="110" y1="255" x2="110" y2="90" stroke="#c5a" stroke-width="4"/>
+  <text x="90" y="259" font-size="12" fill="#c5a" font-weight="bold">−1</text>
+  <text x="96" y="92" font-size="12" fill="#c5a" font-weight="bold">2</text>
+  <text x="20" y="200" font-size="11" fill="#c5a">外限</text>
+  <text x="20" y="214" font-size="11" fill="#c5a">−1≤y≤2</text>
+
+  <!-- 穿线 y=1 → SVGy=200-55=145; x从y²=1(165) 到 y+2=3(110+3*55=275) -->
+  <line x1="121" y1="145" x2="290" y2="145" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="123" y1="145" x2="270" y2="145" stroke="#e6a23c" stroke-width="3" marker-end="url(#bo)"/>
+  <circle cx="121" cy="145" r="3.5" fill="#46c"/>
+  <circle cx="275" cy="145" r="3.5" fill="#e77"/>
+  <text x="285" y="142" font-size="11" fill="#666">y</text>
+
+  <text x="40" y="335" font-size="10.5" fill="#888">横线只穿一次→Y型；若用X型，x∈[0,1]上下边界都是抛物线两支，得拆两块——故Y型省事</text>
+</svg>

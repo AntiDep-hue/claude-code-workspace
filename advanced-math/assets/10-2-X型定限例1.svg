@@ -1,0 +1,40 @@
+<svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <defs>
+    <marker id="ad" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#444"/></marker>
+    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e6a23c"/></marker>
+  </defs>
+
+  <rect x="8" y="6" width="424" height="44" rx="5" fill="#f4f6fb" stroke="#ccd"/>
+  <text x="18" y="25" font-size="12.5" fill="#333" font-weight="bold">本图演算（例1，X型）：∫∫_D xy dσ = ∫₁² [ ∫₁ˣ xy dy ] dx</text>
+  <text x="18" y="42" font-size="12.5" fill="#333">D：由 y=1, x=2, y=x 围成的三角形</text>
+
+  <!-- 轴 -->
+  <line x1="50" y1="290" x2="420" y2="290" stroke="#444" stroke-width="1.4" marker-end="url(#ad)"/>
+  <line x1="70" y1="310" x2="70" y2="80" stroke="#444" stroke-width="1.4" marker-end="url(#ad)"/>
+  <text x="412" y="308" font-size="12" fill="#444">x</text>
+  <text x="56" y="92" font-size="12" fill="#444">y</text>
+
+  <!-- 三角形 D: (1,1)=(140,220) (2,1)=(210,220) (2,2)=(210,150). u=70,ox=70,oy=290 -->
+  <polygon points="140,220 210,220 210,150" fill="#dff0e6" stroke="#2b7" stroke-width="2"/>
+  <text x="178" y="205" font-size="15" fill="#2b7" font-weight="bold">D</text>
+
+  <!-- 边标注 -->
+  <text x="150" y="237" font-size="12" fill="#e77" font-weight="bold">y=1（内层下限）</text>
+  <text x="150" y="135" font-size="12" fill="#46c" font-weight="bold">y=x（内层上限）</text>
+  <text x="215" y="190" font-size="11.5" fill="#888">x=2</text>
+
+  <!-- 投影 [1,2] -->
+  <line x1="140" y1="290" x2="210" y2="290" stroke="#c5a" stroke-width="4"/>
+  <text x="135" y="306" font-size="12" fill="#c5a" font-weight="bold">1</text>
+  <text x="206" y="306" font-size="12" fill="#c5a" font-weight="bold">2</text>
+  <text x="140" y="322" font-size="11" fill="#c5a">外限：1≤x≤2（常数）</text>
+
+  <!-- 穿线 x=1.6 → SVGx=182, 从 y=1(220) 到 y=x=1.6(280-..): oy-1.6*70=290-112=178 -->
+  <line x1="182" y1="290" x2="182" y2="170" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="182" y1="218" x2="182" y2="180" stroke="#e6a23c" stroke-width="3" marker-end="url(#ao)"/>
+  <circle cx="182" cy="220" r="3.5" fill="#e77"/>
+  <circle cx="182" cy="178" r="3.5" fill="#46c"/>
+  <text x="172" y="305" font-size="11" fill="#666">x</text>
+
+  <text x="50" y="338" font-size="10.5" fill="#888">竖线只穿 D 一次→X型；橙线从 y=1 穿到 y=x，读出内层 y 的下/上限</text>
+</svg>
