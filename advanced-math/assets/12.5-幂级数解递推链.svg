@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" font-family="sans-serif">
+  <!-- 本图演算框 -->
+  <rect x="10" y="8" width="440" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="20" y="25" font-size="12" fill="#445">本图演算　例7  y″−xy=0：递推 aₙ₊₂ = aₙ₋₁ /[(n+2)(n+1)]</text>
+  <text x="20" y="40" font-size="12" fill="#445">两条初值各喂一条链，其余系数全为 0</text>
+
+  <!-- a0 链 (全0) -->
+  <text x="30" y="80" font-size="13" fill="#e77" font-weight="bold">a₀ = 0</text>
+  <g font-size="12" fill="#e77">
+    <text x="120" y="80">→ a₂=0</text>
+    <text x="210" y="80">→ a₅=0</text>
+    <text x="300" y="80">→ a₈=0 ⋯</text>
+  </g>
+  <line x1="95" y1="76" x2="115" y2="76" stroke="#e77" stroke-width="1.3"/>
+  <line x1="175" y1="76" x2="205" y2="76" stroke="#e77" stroke-width="1.3"/>
+  <line x1="265" y1="76" x2="295" y2="76" stroke="#e77" stroke-width="1.3"/>
+  <text x="30" y="100" font-size="11" fill="#888">这条链全是 0 —— 对 y 无贡献</text>
+
+  <!-- a1 链 (非零, 生长动画) -->
+  <text x="30" y="150" font-size="13" fill="#2b7" font-weight="bold">a₁ = 1</text>
+  <g font-size="12" fill="#2b7">
+    <text x="120" y="150" opacity="0">→ a₄=1/(4·3)<animate attributeName="opacity" from="0" to="1" begin="0.3s" dur="0.5s" fill="freeze"/></text>
+    <text x="120" y="172" opacity="0">→ a₇=1/(7·6·4·3)<animate attributeName="opacity" from="0" to="1" begin="0.9s" dur="0.5s" fill="freeze"/></text>
+    <text x="120" y="194" opacity="0">→ a₁₀=⋯<animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.5s" fill="freeze"/></text>
+  </g>
+  <line x1="95" y1="146" x2="115" y2="146" stroke="#2b7" stroke-width="1.3"/>
+  <text x="30" y="170" font-size="11" fill="#888">这条链</text>
+  <text x="30" y="184" font-size="11" fill="#888">逐级生长</text>
+
+  <!-- 合成解 -->
+  <rect x="30" y="225" width="400" height="70" rx="6" fill="#f1faf4" stroke="#bfe6cd"/>
+  <text x="45" y="250" font-size="13" fill="#2b7" font-weight="bold">特解 y =</text>
+  <text x="120" y="250" font-size="14" fill="#2b7">x + x⁴/(4·3) + x⁷/(7·6·4·3) + ⋯</text>
+  <text x="45" y="278" font-size="11.5" fill="#666">只有 n ≡ 1 (mod 3) 的幂次留下来 —— 全来自 a₁ 这条链</text>
+
+  <text x="30" y="330" font-size="11.5" fill="#888">口诀：a₀ 喂出的链恰好遇到 0；a₁ 喂出的链步步非零，撑起整个解</text>
+</svg>

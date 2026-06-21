@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 300" font-family="sans-serif">
+  <defs>
+    <marker id="c8a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+  </defs>
+  <!-- 本图演算框 -->
+  <rect x="8" y="6" width="454" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="18" y="23" font-size="12" fill="#445">本图演算　代欧拉公式 cos t=(e^{it}+e^{-it})/2, sin t=(e^{it}-e^{-it})/2i</text>
+  <text x="18" y="38" font-size="12" fill="#445">把第 n 项 aₙcos+bₙsin 合并成 cₙe^{int}+c₋ₙe^{-int}</text>
+
+  <!-- 左: 实数形式两项 -->
+  <rect x="25" y="80" width="170" height="90" rx="6" fill="#fdf3f3" stroke="#eccaca"/>
+  <text x="40" y="108" font-size="13" fill="#e77" font-weight="bold">aₙ cos(nπx/l)</text>
+  <text x="40" y="140" font-size="13" fill="#46c" font-weight="bold">+ bₙ sin(nπx/l)</text>
+  <text x="40" y="162" font-size="11" fill="#888">两个实系数</text>
+
+  <!-- 中: 欧拉公式代入 箭头 -->
+  <line x1="200" y1="125" x2="265" y2="125" stroke="#444" stroke-width="2" marker-end="url(#c8a)"/>
+  <text x="198" y="112" font-size="11" fill="#666">代欧拉</text>
+  <text x="200" y="148" font-size="11" fill="#666">同次归并</text>
+
+  <!-- 右: 复数形式两项 -->
+  <rect x="275" y="80" width="180" height="90" rx="6" fill="#f1faf4" stroke="#bfe6cd"/>
+  <text x="290" y="108" font-size="13" fill="#c5a" font-weight="bold">cₙ e^{inπx/l}</text>
+  <text x="290" y="140" font-size="13" fill="#2b7" font-weight="bold">+ c₋ₙ e^{−inπx/l}</text>
+  <text x="290" y="162" font-size="11" fill="#888">一个复系数(±频率)</text>
+
+  <!-- 系数对应 -->
+  <rect x="40" y="195" width="400" height="78" rx="6" fill="#f7f8fa" stroke="#dde2ea"/>
+  <text x="55" y="218" font-size="12.5" fill="#445" font-weight="bold">系数关系：</text>
+  <text x="55" y="242" font-size="12.5" fill="#c5a">cₙ = (aₙ − bₙ i)/2,</text>
+  <text x="230" y="242" font-size="12.5" fill="#2b7">c₋ₙ = (aₙ + bₙ i)/2,</text>
+  <text x="55" y="264" font-size="12.5" fill="#445">c₀ = a₀/2　→　统一为一个积分 cₙ = (1/2l)∫ f·e^{−inπx/l} dx</text>
+</svg>

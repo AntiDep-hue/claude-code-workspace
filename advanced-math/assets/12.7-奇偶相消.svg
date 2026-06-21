@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 320" font-family="sans-serif">
+  <!-- 本图演算框 -->
+  <rect x="8" y="6" width="454" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="18" y="23" font-size="12" fill="#445">本图演算　f 奇 ⇒ aₙ = (1/π)∫₋π^π f(x)cos nx dx = 0</text>
+  <text x="18" y="38" font-size="12" fill="#445">被积函数 f(x)·cos nx = 奇×偶 = 奇，对称区间积分相消</text>
+
+  <!-- 坐标轴 原点(235,180) -->
+  <line x1="50" y1="180" x2="425" y2="180" stroke="#444" stroke-width="1.3"/>
+  <line x1="235" y1="290" x2="235" y2="70" stroke="#444" stroke-width="1.3"/>
+  <text x="415" y="197" font-size="11" fill="#888">x</text>
+  <text x="404" y="197" font-size="10" fill="#888">π</text>
+  <text x="60" y="197" font-size="10" fill="#888">−π</text>
+
+  <!-- 奇函数被积曲线 g(x)=f·cos nx, 关于原点对称 -->
+  <!-- 右半 (正面积为主) -->
+  <path d="M235,180 C260,140 285,135 310,160 C335,185 360,150 405,180"
+        fill="#2b7" opacity="0.2"/>
+  <path d="M235,180 C260,140 285,135 310,160 C335,185 360,150 405,180"
+        fill="none" stroke="#2b7" stroke-width="2"/>
+  <!-- 左半 (与右半中心对称, 负面积) -->
+  <path d="M235,180 C210,220 185,225 160,200 C135,175 110,210 65,180"
+        fill="#e77" opacity="0.2"/>
+  <path d="M235,180 C210,220 185,225 160,200 C135,175 110,210 65,180"
+        fill="none" stroke="#e77" stroke-width="2"/>
+
+  <!-- 对称标注 -->
+  <circle cx="310" cy="160" r="3.5" fill="#2b7"/>
+  <circle cx="160" cy="200" r="3.5" fill="#e77"/>
+  <line x1="310" y1="160" x2="160" y2="200" stroke="#999" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="235" cy="180" r="3" fill="#444"/>
+
+  <text x="300" y="125" font-size="11.5" fill="#2b7" font-weight="bold">右半 +A</text>
+  <text x="95" y="240" font-size="11.5" fill="#e77" font-weight="bold">左半 −A</text>
+  <text x="170" y="100" font-size="12" fill="#445">关于原点中心对称 → 相加 = 0</text>
+
+  <text x="50" y="305" font-size="11" fill="#888">奇函数省一半工：aₙ 全为 0，只需算 bₙ（且 bₙ=(2/π)∫₀^π，半区间翻倍）</text>
+</svg>

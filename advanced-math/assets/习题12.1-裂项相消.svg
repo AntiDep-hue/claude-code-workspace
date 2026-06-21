@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" font-family="sans-serif">
+  <!-- 本图演算框 -->
+  <rect x="8" y="6" width="464" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="18" y="23" font-size="12" fill="#445">本图演算　第2(2)题：1/[(2k−1)(2k+1)] = ½(1/(2k−1) − 1/(2k+1))</text>
+  <text x="18" y="38" font-size="12" fill="#445">相邻项的"右半"与下一项的"左半"抵消，sₙ 只剩头尾</text>
+
+  <!-- 每项画成 ½(a_k - a_{k+1}), 用色块表示 +/- 半 -->
+  <!-- k=1: +1/1  -1/3 -->
+  <!-- k=2: +1/3  -1/5 -->
+  <!-- k=3: +1/5  -1/7 -->
+  <g font-size="13">
+    <!-- 行 k=1 -->
+    <text x="30" y="85" fill="#445">k=1:</text>
+    <text x="80" y="85" fill="#2b7" font-weight="bold">+½·1</text>
+    <text x="150" y="85" fill="#e77" font-weight="bold">−½·⅓</text>
+    <!-- 行 k=2 -->
+    <text x="30" y="125" fill="#445">k=2:</text>
+    <text x="80" y="125" fill="#2b7" font-weight="bold">+½·⅓</text>
+    <text x="150" y="125" fill="#e77" font-weight="bold">−½·⅕</text>
+    <!-- 行 k=3 -->
+    <text x="30" y="165" fill="#445">k=3:</text>
+    <text x="80" y="165" fill="#2b7" font-weight="bold">+½·⅕</text>
+    <text x="150" y="165" fill="#e77" font-weight="bold">−½·⅐</text>
+    <text x="30" y="195" fill="#888">  ⋮</text>
+    <!-- 行 k=n -->
+    <text x="30" y="220" fill="#445">k=n:</text>
+    <text x="78" y="220" fill="#2b7" font-weight="bold">+½·1/(2n−1)</text>
+    <text x="180" y="220" fill="#e77" font-weight="bold">−½·1/(2n+1)</text>
+  </g>
+
+  <!-- 抵消连线: k=1的红 -1/3 与 k=2的绿 +1/3 -->
+  <path d="M175,90 C220,105 220,108 110,120" fill="none" stroke="#999" stroke-width="1.3" stroke-dasharray="3 3"/>
+  <path d="M175,130 C225,145 225,148 110,160" fill="none" stroke="#999" stroke-width="1.3" stroke-dasharray="3 3"/>
+  <text x="235" y="112" font-size="11" fill="#999">抵消</text>
+  <text x="235" y="152" font-size="11" fill="#999">抵消</text>
+
+  <!-- 结论 -->
+  <rect x="290" y="70" width="180" height="160" rx="6" fill="#f1faf4" stroke="#bfe6cd"/>
+  <text x="305" y="95" font-size="12.5" fill="#445" font-weight="bold">只剩头尾两项：</text>
+  <text x="305" y="125" font-size="14" fill="#2b7" font-weight="bold">sₙ = ½·1</text>
+  <text x="305" y="150" font-size="14" fill="#e77" font-weight="bold">    − ½·1/(2n+1)</text>
+  <line x1="305" y1="162" x2="455" y2="162" stroke="#ccc"/>
+  <text x="305" y="185" font-size="12.5" fill="#445">n→∞，尾项→0</text>
+  <text x="305" y="212" font-size="14" fill="#46c" font-weight="bold">sₙ → ½　(收敛)</text>
+
+  <text x="30" y="260" font-size="11" fill="#888">望远镜求和：中间项首尾配对全消，部分和坍缩成两端 —— 收敛的本质</text>
+  <!-- 脉冲提示结果 -->
+  <circle cx="300" cy="207" r="5" fill="none" stroke="#46c" stroke-width="2">
+    <animate attributeName="r" from="5" to="13" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>

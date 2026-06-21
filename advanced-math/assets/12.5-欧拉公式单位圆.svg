@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" font-family="sans-serif">
+  <defs>
+    <marker id="eax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#444"/></marker>
+    <marker id="erho" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#c5a"/></marker>
+  </defs>
+  <!-- 本图演算框 -->
+  <rect x="8" y="6" width="404" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="18" y="23" font-size="12" fill="#445">本图演算　e^{iθ} = cos θ + i sin θ</text>
+  <text x="18" y="38" font-size="12" fill="#445">单位圆上辐角 θ 的点，实部影子=cos θ(红)，虚部影子=sin θ(蓝)</text>
+
+  <!-- 坐标轴, 原点(210,225) 单位80 -->
+  <line x1="40" y1="225" x2="395" y2="225" stroke="#444" stroke-width="1.4" marker-end="url(#eax)"/>
+  <line x1="210" y1="370" x2="210" y2="60" stroke="#444" stroke-width="1.4" marker-end="url(#eax)"/>
+  <text x="382" y="244" font-size="12" fill="#444">Re</text>
+  <text x="218" y="72" font-size="12" fill="#444">Im</text>
+
+  <!-- 单位圆 -->
+  <circle cx="210" cy="225" r="80" fill="none" stroke="#bbb" stroke-width="1.3"/>
+  <text x="294" y="220" font-size="11" fill="#888">|z|=1</text>
+
+  <!-- 角 θ=50° 的点: cos50≈.643 sin50≈.766 -> (210+51.4, 225-61.3)=(261,164) -->
+  <!-- 半径 ρ=1 -->
+  <line x1="210" y1="225" x2="261" y2="164" stroke="#c5a" stroke-width="2.3" marker-end="url(#erho)"/>
+  <text x="232" y="190" font-size="13" fill="#c5a" font-weight="bold">e^{iθ}</text>
+
+  <!-- 动点沿圆移动 -->
+  <circle r="6" fill="#c5a">
+    <animateMotion dur="3s" repeatCount="indefinite"
+      path="M80,0 A80,80 0 0,0 51.4,-61.3"/>
+  </circle>
+  <circle cx="261" cy="164" r="5.5" fill="#c5a"/>
+
+  <!-- 角度弧 -->
+  <path d="M250,225 A40,40 0 0,0 235.7,196.6" fill="none" stroke="#888" stroke-width="1.2"/>
+  <text x="232" y="218" font-size="13" fill="#666">θ</text>
+
+  <!-- cos θ 实部投影 (红) -->
+  <line x1="261" y1="164" x2="261" y2="225" stroke="#46c" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="210" y1="225" x2="261" y2="225" stroke="#e77" stroke-width="3"/>
+  <text x="222" y="244" font-size="12.5" fill="#e77" font-weight="bold">cos θ</text>
+
+  <!-- sin θ 虚部投影 (蓝) -->
+  <line x1="261" y1="164" x2="210" y2="164" stroke="#e77" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="210" y1="225" x2="210" y2="164" stroke="#46c" stroke-width="3"/>
+  <text x="150" y="200" font-size="12.5" fill="#46c" font-weight="bold">sin θ</text>
+
+  <text x="40" y="362" font-size="11" fill="#888">θ 增大 → 点逆时针走 → 两条影子分别画出 cos θ、sin θ</text>
+</svg>

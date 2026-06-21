@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 330" font-family="sans-serif">
+  <!-- 本图演算框 -->
+  <rect x="8" y="6" width="464" height="40" rx="5" fill="#f3f6fb" stroke="#cdd8ea"/>
+  <text x="18" y="23" font-size="12" fill="#445">本图演算　f(x)=(4/π)(sin x + ⅓sin3x + ⅕sin5x + ⋯)</text>
+  <text x="18" y="38" font-size="12" fill="#445">奇次正弦谐波逐个叠加，部分和步步逼近方波</text>
+
+  <!-- 坐标轴 原点(240,180), x: -π..π 映射到 60..420 (π->180px), y单位 70 -->
+  <line x1="50" y1="180" x2="430" y2="180" stroke="#444" stroke-width="1.2"/>
+  <line x1="240" y1="290" x2="240" y2="70" stroke="#444" stroke-width="1.2"/>
+  <text x="420" y="197" font-size="11" fill="#888">x</text>
+  <text x="404" y="197" font-size="10" fill="#888">π</text>
+  <text x="62" y="197" font-size="10" fill="#888">−π</text>
+  <text x="244" y="118" font-size="10" fill="#888">1</text>
+
+  <!-- 目标方波 (浅灰参考) -->
+  <line x1="60" y1="250" x2="240" y2="250" stroke="#ccc" stroke-width="2"/>
+  <line x1="240" y1="110" x2="420" y2="110" stroke="#ccc" stroke-width="2"/>
+  <line x1="240" y1="110" x2="240" y2="250" stroke="#ccc" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="320" y="105" font-size="10" fill="#aaa">目标方波</text>
+
+  <!-- s1: (4/π)sin x  振幅 1.273*70=89px. 采样点连线 -->
+  <path d="M60,180 C105,232 150,250 195,224 C210,214 225,196 240,180 C270,145 285,128 300,118 C330,108 375,128 420,180"
+        fill="none" stroke="#e77" stroke-width="1.6" opacity="0.55"/>
+  <text x="300" y="150" font-size="10.5" fill="#e77">s₁ (只 sin x)</text>
+
+  <!-- s2: + sin3x/3, 更方 -->
+  <path d="M60,180 C90,240 120,245 150,235 C180,228 195,250 215,238 C228,230 234,205 240,180 C246,155 252,130 265,122 C285,110 300,132 330,125 C360,118 390,240 420,180"
+        fill="none" stroke="#2b7" stroke-width="1.8" opacity="0.7"/>
+  <text x="120" y="262" font-size="10.5" fill="#2b7">s₂ (+⅓sin3x)</text>
+
+  <!-- s3: 生长动画线 - 更贴近方波 -->
+  <path id="s3" d="M60,250 C100,248 120,252 145,250 C175,247 185,253 210,250 C228,248 236,210 240,180 C244,150 252,112 270,110 C300,108 320,113 350,110 C385,108 400,112 420,180"
+        fill="none" stroke="#46c" stroke-width="2.6"
+        stroke-dasharray="900" stroke-dashoffset="900">
+    <animate attributeName="stroke-dashoffset" from="900" to="0" dur="2.4s" fill="freeze"/>
+  </path>
+  <text x="60" y="130" font-size="11" fill="#46c" font-weight="bold">s₃ (+⅕sin5x) 最贴</text>
+
+  <text x="50" y="312" font-size="11" fill="#888">项越多，平顶越平、跳变越陡 —— 正弦积木拼出方波</text>
+</svg>
