@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 500">
+  <defs>
+    <marker id="arr-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-b-ghost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#93c5fd"/>
+    </marker>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arr-o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ea580c"/>
+    </marker>
+    <marker id="arr-o-ghost" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#fdba74"/>
+    </marker>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="620" height="500" fill="#fafafa" rx="8"/>
+
+  <!-- 顶部演算框 -->
+  <rect x="15" y="12" width="590" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.2"/>
+  <text x="310" y="29" text-anchor="middle" font-size="13" font-family="serif" fill="#92400e" font-style="italic">本图演算: Av = λv — 特征向量只被缩放不旋转 (动画循环); 非特征向量方向改变</text>
+
+  <!-- 网格(淡) -->
+  <g stroke="#e5e7eb" stroke-width="0.5">
+    <line x1="15" y1="60" x2="605" y2="60"/>
+    <line x1="15" y1="110" x2="605" y2="110"/>
+    <line x1="15" y1="160" x2="605" y2="160"/>
+    <line x1="15" y1="210" x2="605" y2="210"/>
+    <line x1="15" y1="260" x2="605" y2="260"/>
+    <line x1="15" y1="310" x2="605" y2="310"/>
+    <line x1="15" y1="360" x2="605" y2="360"/>
+    <line x1="15" y1="410" x2="605" y2="410"/>
+    <line x1="15" y1="460" x2="605" y2="460"/>
+    <line x1="70" y1="55" x2="70" y2="490"/>
+    <line x1="125" y1="55" x2="125" y2="490"/>
+    <line x1="180" y1="55" x2="180" y2="490"/>
+    <line x1="235" y1="55" x2="235" y2="490"/>
+    <line x1="290" y1="55" x2="290" y2="490"/>
+    <line x1="345" y1="55" x2="345" y2="490"/>
+    <line x1="400" y1="55" x2="400" y2="490"/>
+    <line x1="455" y1="55" x2="455" y2="490"/>
+    <line x1="510" y1="55" x2="510" y2="490"/>
+    <line x1="565" y1="55" x2="565" y2="490"/>
+  </g>
+
+  <!-- 坐标轴 -->
+  <line x1="40" y1="360" x2="590" y2="360" stroke="#6b7280" stroke-width="1.2"/>
+  <line x1="180" y1="490" x2="180" y2="55" stroke="#6b7280" stroke-width="1.2"/>
+  <text x="595" y="365" font-size="12" font-family="serif" fill="#6b7280">x</text>
+  <text x="175" y="50" font-size="12" font-family="serif" fill="#6b7280">y</text>
+
+  <!-- 原点标记 -->
+  <circle cx="180" cy="360" r="3.5" fill="#374151"/>
+  <text x="170" y="378" font-size="11" font-family="serif" fill="#374151">O</text>
+
+  <!-- ====== 特征方向 1: v₁=(1,1), λ₁=3 ====== -->
+  <!-- 特征方向虚线(从原点延伸很远,贯穿整个变换) -->
+  <line x1="180" y1="360" x2="510" y2="30" stroke="#93c5fd" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- 终态参考: Av₁=(3,3) 虚线ghost — 静态视图可读 -->
+  <line x1="180" y1="360" x2="345" y2="195" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6" marker-end="url(#arr-b-ghost)"/>
+
+  <!-- 主箭头: 从 v₁ 到 Av₁ 循环拉伸 -->
+  <line x1="180" y1="360" x2="235" y2="305" stroke="#2563eb" stroke-width="2.8" marker-end="url(#arr-b)">
+    <animate attributeName="x2" values="235; 345; 235" keyTimes="0; 0.65; 1" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="305; 195; 305" keyTimes="0; 0.65; 1" dur="4.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- v₁ 标签 -->
+  <text x="198" y="328" font-size="13" font-family="serif" fill="#2563eb" font-weight="bold">v₁</text>
+
+  <!-- Av₁ 标签(终态位置) -->
+  <text x="350" y="188" font-size="12" font-family="serif" fill="#1d4ed8" font-weight="bold">Av₁</text>
+
+  <!-- λ₁=3 标注 -->
+  <text x="268" y="262" font-size="12" font-family="serif" fill="#2563eb" font-style="italic">λ₁=3</text>
+
+  <!-- v₁ 方向标注(标在虚线附近) -->
+  <text x="395" y="70" font-size="10" font-family="serif" fill="#60a5fa">方向: (1,1)</text>
+
+  <!-- ====== 特征方向 2: v₂=(1,−1), λ₂=1 ====== -->
+  <!-- 特征方向虚线(水平向右) -->
+  <line x1="180" y1="360" x2="510" y2="360" stroke="#86efac" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- v₂=(1,−1), Av₂=(1,−1) — λ=1, 不变。加脉冲动画强调"没变" -->
+  <line x1="180" y1="360" x2="345" y2="360" stroke="#16a34a" stroke-width="2.8" marker-end="url(#arr-g)">
+    <animate attributeName="opacity" values="1; 0.4; 1; 0.4; 1" keyTimes="0; 0.25; 0.5; 0.75; 1" dur="4.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- v₂ 标签 -->
+  <text x="352" y="355" font-size="13" font-family="serif" fill="#16a34a" font-weight="bold">v₂ = Av₂</text>
+
+  <!-- λ₂=1 标注 -->
+  <text x="250" y="350" font-size="12" font-family="serif" fill="#16a34a" font-style="italic">λ₂=1 (不变)</text>
+
+  <!-- v₂ 方向标注 -->
+  <text x="395" y="395" font-size="10" font-family="serif" fill="#4ade80">方向: (1,−1)</text>
+
+  <!-- ====== 非特征向量 w=(−0.5, 1.2) ====== -->
+  <!-- Aw = A*(−0.5,1.2) = (2*(−0.5)+1.2, (−0.5)+2*1.2) = (0.2, 1.9) -->
+  <!-- screen: w → (−0.5*55+180, 360−1.2*55) = (152.5, 294) -->
+  <!--        Aw→ (0.2*55+180, 360−1.9*55) = (191, 255.5) -->
+
+  <!-- 终态参考: Aw 虚线ghost -->
+  <line x1="180" y1="360" x2="191" y2="255.5" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6" marker-end="url(#arr-o-ghost)"/>
+
+  <!-- 主箭头: 从 w 到 Aw 循环(方向+长度都变) -->
+  <line x1="180" y1="360" x2="152.5" y2="294" stroke="#ea580c" stroke-width="2.8" marker-end="url(#arr-o)">
+    <animate attributeName="x2" values="152.5; 191; 152.5" keyTimes="0; 0.65; 1" dur="4.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="294; 255.5; 294" keyTimes="0; 0.65; 1" dur="4.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- w 标签 -->
+  <text x="130" y="318" font-size="13" font-family="serif" fill="#dc2626" font-weight="bold">w</text>
+
+  <!-- Aw 标签(终态位置) -->
+  <text x="198" y="250" font-size="12" font-family="serif" fill="#ea580c" font-weight="bold">Aw</text>
+
+  <!-- w方向变化弧线标注 -->
+  <path d="M 165 310 A 35 35 0 0 0 175 280" fill="none" stroke="#f87171" stroke-width="1.2" stroke-dasharray="3,2"/>
+  <text x="138" y="298" font-size="10" font-family="serif" fill="#ef4444" font-style="italic">方向变了!</text>
+
+  <!-- ====== 图例 ====== -->
+  <rect x="415" y="400" width="192" height="80" rx="6" fill="white" stroke="#d1d5db" stroke-width="1"/>
+  <text x="428" y="418" font-size="11" font-family="sans-serif" fill="#374151" font-weight="bold">A = [2 1; 1 2]</text>
+
+  <line x1="428" y1="436" x2="458" y2="436" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr-b)"/>
+  <text x="465" y="440" font-size="10" font-family="serif" fill="#374151">特征向量:沿直线拉伸</text>
+
+  <line x1="428" y1="454" x2="458" y2="454" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arr-g)"/>
+  <text x="465" y="458" font-size="10" font-family="serif" fill="#374151">v₂=Av₂ (λ=1,不动)</text>
+
+  <line x1="428" y1="472" x2="458" y2="472" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr-o)"/>
+  <text x="465" y="476" font-size="10" font-family="serif" fill="#374151">普通向量:方向改变</text>
+
+  <!-- ====== 底部注释 ====== -->
+  <text x="310" y="496" text-anchor="middle" font-size="11" font-family="serif" fill="#9ca3af" font-style="italic">对角化 = 用特征向量做新基, 变换变成沿各方向独立缩放</text>
+</svg>

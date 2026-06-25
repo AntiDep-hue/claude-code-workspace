@@ -1,0 +1,95 @@
+<svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#666"/>
+    </marker>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="ad" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#d44"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="600" height="440" fill="#fafafa" rx="6"/>
+
+  <!-- 本图演算框 -->
+  <rect x="12" y="10" width="576" height="30" rx="4" fill="#e8f0fe" stroke="#90b8f8" stroke-width="0.8"/>
+  <text x="300" y="30" text-anchor="middle" font-size="12" fill="#2b5797" font-family="sans-serif" font-weight="bold">
+    本图演算: x=Qy 旋转坐标系对齐主轴 → f=yᵀΛy=λ₁y₁²+λ₂y₂², 交叉项消失
+  </text>
+
+  <!-- ===== 左面板: 变换前 ===== -->
+  <rect x="15" y="48" width="280" height="36" rx="4" fill="#f0f0f0" stroke="#bbb" stroke-width="1"/>
+  <text x="155" y="71" font-size="14" fill="#444" font-family="sans-serif" text-anchor="middle" font-weight="bold">
+    变换前 (x,y 系) — 椭圆倾斜
+  </text>
+
+  <!-- 坐标轴 (x,y) -->
+  <line x1="25" y1="230" x2="285" y2="230" stroke="#999" stroke-width="1.2" marker-end="url(#ag)"/>
+  <line x1="155" y1="355" x2="155" y2="115" stroke="#999" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="278" y="245" font-size="13" fill="#999" font-family="sans-serif">x</text>
+  <text x="148" y="110" font-size="13" fill="#999" font-family="sans-serif">y</text>
+
+  <!-- 倾斜椭圆 -->
+  <ellipse cx="155" cy="230" rx="85" ry="60" transform="rotate(45 155 230)"
+           fill="rgba(37,99,235,0.06)" stroke="#d44" stroke-width="2.2"/>
+
+  <!-- 原基向量 (e₁, e₂) 灰 -->
+  <line x1="155" y1="230" x2="215" y2="230" stroke="#999" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="218" y="226" font-size="11" fill="#999" font-family="sans-serif">e₁</text>
+  <line x1="155" y1="230" x2="155" y2="170" stroke="#999" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="140" y="166" font-size="11" fill="#999" font-family="sans-serif">e₂</text>
+
+  <!-- 主轴 (新基方向, 已在图中) -->
+  <line x1="95" y1="290" x2="215" y2="170" stroke="#d44" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="95" y1="170" x2="215" y2="290" stroke="#d44" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- 公式 -->
+  <text x="155" y="368" font-size="13" fill="#d44" font-family="serif" text-anchor="middle">f = 3x² + 2xy + 3y²</text>
+
+  <!-- 箭头 -->
+  <text x="300" y="240" font-size="24" fill="#444" font-family="sans-serif" text-anchor="middle">→</text>
+  <text x="300" y="258" font-size="12" fill="#666" font-family="sans-serif" text-anchor="middle">x = Qy</text>
+  <text x="300" y="274" font-size="11" fill="#888" font-family="sans-serif" text-anchor="middle">QᵀAQ = Λ</text>
+
+  <!-- ===== 右面板: 变换后 ===== -->
+  <rect x="308" y="48" width="277" height="36" rx="4" fill="#e8f5e9" stroke="#2b7" stroke-width="1"/>
+  <text x="446" y="71" font-size="14" fill="#2b7" font-family="sans-serif" text-anchor="middle" font-weight="bold">
+    变换后 (y₁,y₂ 系) — 椭圆对齐坐标轴
+  </text>
+
+  <!-- 坐标轴 (y₁, y₂) — 蓝 -->
+  <line x1="318" y1="230" x2="578" y2="230" stroke="#2563eb" stroke-width="1.2" marker-end="url(#ab)"/>
+  <line x1="446" y1="355" x2="446" y2="115" stroke="#2563eb" stroke-width="1.2" marker-end="url(#ab)"/>
+  <text x="570" y="245" font-size="13" fill="#2563eb" font-family="sans-serif">y₁</text>
+  <text x="438" y="110" font-size="13" fill="#2563eb" font-family="sans-serif">y₂</text>
+
+  <!-- 对齐的椭圆: rx=85, ry=60, 不旋转 -->
+  <ellipse cx="446" cy="230" rx="85" ry="60"
+           fill="rgba(37,99,235,0.06)" stroke="#2563eb" stroke-width="2.2"/>
+
+  <!-- 新基向量 (q₁, q₂) 蓝 -->
+  <line x1="446" y1="230" x2="531" y2="230" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="534" y="226" font-size="12" fill="#2563eb" font-family="sans-serif" font-weight="bold">q₁</text>
+  <line x1="446" y1="230" x2="446" y2="170" stroke="#2563eb" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="430" y="165" font-size="12" fill="#2563eb" font-family="sans-serif" font-weight="bold">q₂</text>
+
+  <!-- 半轴标注 -->
+  <line x1="446" y1="230" x2="531" y2="230" stroke="#2563eb" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="492" y="222" font-size="11" fill="#2563eb" font-family="sans-serif">√(c/λ₁)</text>
+  <line x1="446" y1="230" x2="446" y2="170" stroke="#2563eb" stroke-width="0.8" stroke-dasharray="3,2"/>
+  <text x="450" y="198" font-size="11" fill="#2563eb" font-family="sans-serif">√(c/λ₂)</text>
+
+  <!-- 公式 -->
+  <text x="446" y="368" font-size="13" fill="#2563eb" font-family="serif" text-anchor="middle" font-weight="bold">f = 2y₁² + 4y₂²</text>
+
+  <!-- 底部总结 -->
+  <rect x="30" y="392" width="540" height="36" rx="5" fill="#e8f5e9" stroke="#2b7" stroke-width="1.5"/>
+  <text x="300" y="408" font-size="13" fill="#2b7" font-family="sans-serif" text-anchor="middle">
+    Q 的列 = A 的单位正交特征向量, Λ 的对角元 = 特征值, 且 λ₁+λ₂ = tr(A)
+  </text>
+  <text x="300" y="423" font-size="12" fill="#2b7" font-family="sans-serif" text-anchor="middle">
+    f 的系数是特征值、主轴方向是特征向量、旋转是正交变换——三者合一
+  </text>
+</svg>

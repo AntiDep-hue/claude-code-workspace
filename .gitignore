@@ -3,6 +3,7 @@
 
 # Claude Code 本机专属配置（权限白名单含本机路径，不跨端）
 .claude/settings.local.json
+.codex/
 
 # 依赖
 node_modules/

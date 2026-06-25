@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 300" font-family="sans-serif">
+  <defs>
+    <marker id="p6g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/></marker>
+    <marker id="p6r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e77"/></marker>
+  </defs>
+  <rect x="10" y="10" width="450" height="62" rx="6" fill="#f5f7fa" stroke="#ccd5e0"/>
+  <text x="20" y="31" font-size="13" fill="#333" font-weight="bold">本图演算：φ(A) 作用在特征向量上 = φ(λ)·特征向量</text>
+  <text x="20" y="49" font-size="12.5" fill="#333">φ(λ)=λ¹⁰−λ⁹=λ⁹(λ−1)：沿 λ=1 方向被压成 0，沿 λ=5 方向放大 φ(5)=4·5⁹</text>
+  <text x="20" y="66" font-size="12.5" fill="#888">关键：在特征基里 φ(A) 是对角的，逐方向各乘一个数</text>
+  <!-- 原点 -->
+  <circle cx="160" cy="230" r="3" fill="#444"/>
+  <text x="146" y="246" font-size="12" fill="#888">O</text>
+  <!-- ξ1 方向 (λ=1)，(1,1)/√2 指向右上 -->
+  <line x1="160" y1="230" x2="250" y2="140" stroke="#2b7" stroke-width="2.5" marker-end="url(#p6g)"/>
+  <text x="255" y="135" font-size="12.5" fill="#2b7" font-weight="bold">ξ₁ (λ=1)</text>
+  <text x="180" y="200" font-size="11.5" fill="#2b7">φ(1)=0 ⟹ 压成 0</text>
+  <!-- ξ2 方向 (λ=5)，(1,-1)/√2 指向右下 -->
+  <line x1="160" y1="230" x2="230" y2="280" stroke="#e77" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="235" y="285" font-size="12.5" fill="#e77" font-weight="bold">ξ₂ (λ=5)</text>
+  <!-- 放大后的 ξ2 -->
+  <line x1="160" y1="230" x2="380" y2="230" stroke="#e77" stroke-width="2.5" marker-end="url(#p6r)"/>
+  <text x="300" y="223" font-size="11.5" fill="#e77">φ(5)=4·5⁹ ⟹ 放大</text>
+</svg>

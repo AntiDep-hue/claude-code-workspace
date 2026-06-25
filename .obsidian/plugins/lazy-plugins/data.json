@@ -1,0 +1,89 @@
+{
+  "dualConfigs": false,
+  "showConsoleLog": false,
+  "desktop": {
+    "shortDelaySeconds": 5,
+    "longDelaySeconds": 15,
+    "delayBetweenPlugins": 40,
+    "defaultStartupType": null,
+    "showDescriptions": true,
+    "enableDependencies": false,
+    "plugins": {
+      "table-editor-obsidian": {
+        "startupType": "instant"
+      },
+      "aosr": {
+        "startupType": "instant"
+      },
+      "calendar": {
+        "startupType": "instant"
+      },
+      "code-styler": {
+        "startupType": "instant"
+      },
+      "dataview": {
+        "startupType": "instant"
+      },
+      "obsidian-excalidraw-plugin": {
+        "startupType": "instant"
+      },
+      "file-tree-alternative": {
+        "startupType": "instant"
+      },
+      "fix-math": {
+        "startupType": "instant"
+      },
+      "obsidian-git": {
+        "startupType": "instant"
+      },
+      "obsidian-latex-suite": {
+        "startupType": "instant"
+      },
+      "obsidian-linter": {
+        "startupType": "instant"
+      },
+      "obsidian-local-rest-api": {
+        "startupType": "instant"
+      },
+      "obsidian-math-plus": {
+        "startupType": "instant"
+      },
+      "notebook-navigator": {
+        "startupType": "instant"
+      },
+      "number-headings-obsidian": {
+        "startupType": "instant"
+      },
+      "omnisearch": {
+        "startupType": "instant"
+      },
+      "darlal-switcher-plus": {
+        "startupType": "instant"
+      },
+      "shell-path-copy": {
+        "startupType": "instant"
+      },
+      "obsidian-spaced-repetition": {
+        "startupType": "instant"
+      },
+      "obsidian-style-settings": {
+        "startupType": "instant"
+      },
+      "obsidian-tasks-plugin": {
+        "startupType": "instant"
+      },
+      "templater-obsidian": {
+        "startupType": "instant"
+      },
+      "terminal": {
+        "startupType": "instant"
+      },
+      "workbench-drag-path": {
+        "startupType": "instant"
+      },
+      "obsidian-zotero-desktop-connector": {
+        "startupType": "instant"
+      }
+    }
+  }
+}

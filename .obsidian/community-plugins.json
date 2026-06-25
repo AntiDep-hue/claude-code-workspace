@@ -16,5 +16,13 @@
   "calendar",
   "obsidian-math-plus",
   "obsidian-zotero-desktop-connector",
-  "terminal"
+  "obsidian-spaced-repetition",
+  "terminal",
+  "workbench-drag-path",
+  "shell-path-copy",
+  "lazy-plugins",
+  "omnisearch",
+  "fix-math",
+  "file-tree-alternative",
+  "notebook-navigator"
 ]

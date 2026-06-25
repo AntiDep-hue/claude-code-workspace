@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 320" font-family="sans-serif">
+  <defs>
+    <marker id="s2g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/></marker>
+    <marker id="s2r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#e77"/></marker>
+    <marker id="s2b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#46c"/></marker>
+  </defs>
+  <rect x="10" y="10" width="440" height="46" rx="6" fill="#f5f7fa" stroke="#ccd5e0"/>
+  <text x="20" y="31" font-size="13" fill="#333" font-weight="bold">本图演算：b₂ = a₂ − (⟨a₂,b₁⟩/⟨b₁,b₁⟩) b₁</text>
+  <text x="20" y="48" font-size="12.5" fill="#333">施密特核心一步：从 a₂ 里减掉它在 b₁ 方向的投影，剩下的就 ⊥ b₁</text>
+  <!-- 原点 -->
+  <circle cx="90" cy="270" r="3" fill="#444"/>
+  <text x="74" y="285" font-size="12" fill="#888">O</text>
+  <!-- b1 绿 水平 -->
+  <line x1="90" y1="270" x2="300" y2="270" stroke="#2b7" stroke-width="2.5" marker-end="url(#s2g)"/>
+  <text x="250" y="288" font-size="13" fill="#2b7" font-weight="bold">b₁ = a₁</text>
+  <!-- a2 斜上 蓝 -->
+  <line x1="90" y1="270" x2="270" y2="110" stroke="#46c" stroke-width="2.5" marker-end="url(#s2b)"/>
+  <text x="195" y="170" font-size="13" fill="#46c" font-weight="bold">a₂</text>
+  <!-- 投影点(270,270) 投影向量沿b1 -->
+  <line x1="90" y1="270" x2="270" y2="270" stroke="#2b7" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="150" y="263" font-size="11.5" fill="#2b7">投影 = (⟨a₂,b₁⟩/⟨b₁,b₁⟩) b₁</text>
+  <!-- 投影虚线竖直 -->
+  <line x1="270" y1="110" x2="270" y2="270" stroke="#999" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- b2 红 从投影点指向a2末端 = 垂直分量 -->
+  <line x1="270" y1="270" x2="270" y2="110" stroke="#e77" stroke-width="2.5" marker-end="url(#s2r)"/>
+  <text x="278" y="195" font-size="13" fill="#e77" font-weight="bold">b₂ (⊥ b₁)</text>
+  <!-- 直角标记 -->
+  <path d="M270,256 L284,256 L284,270" fill="none" stroke="#999" stroke-width="1"/>
+</svg>

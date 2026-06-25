@@ -1,0 +1,107 @@
+<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b7"/>
+    </marker>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#e77"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="560" height="340" fill="#fafafa" rx="6"/>
+
+  <!-- 本图演算框 -->
+  <rect x="12" y="10" width="536" height="30" rx="4" fill="#e8f0fe" stroke="#90b8f8" stroke-width="0.8"/>
+  <text x="280" y="30" text-anchor="middle" font-size="12" fill="#2b5797" font-family="sans-serif" font-weight="bold">
+    本图演算: xᵀAx = [x₁ x₂] [[a₁₁ a₁₂],[a₁₂ a₂₂]] [x₁; x₂] = a₁₁x₁² + a₂₂x₂² + 2a₁₂x₁x₂
+  </text>
+
+  <!-- ===== 上半: 矩阵乘法三步骤 ===== -->
+
+  <!-- Step label -->
+  <text x="20" y="62" font-size="13" fill="#444" font-family="sans-serif" font-weight="bold">①</text>
+
+  <!-- Matrix A -->
+  <text x="88" y="72" font-size="11" fill="#888" font-family="sans-serif" text-anchor="middle">A (对称)</text>
+  <rect x="50" y="80" width="76" height="52" rx="3" fill="none" stroke="#444" stroke-width="1.5"/>
+  <text x="72" y="102" font-size="16" fill="#2b7" font-family="serif" text-anchor="middle">a₁₁</text>
+  <text x="104" y="102" font-size="16" fill="#e77" font-family="serif" text-anchor="middle">a₁₂</text>
+  <text x="72" y="122" font-size="16" fill="#e77" font-family="serif" text-anchor="middle">a₁₂</text>
+  <text x="104" y="122" font-size="16" fill="#2b7" font-family="serif" text-anchor="middle">a₂₂</text>
+
+  <!-- × x -->
+  <text x="150" y="110" font-size="15" fill="#666" font-family="sans-serif">× [x₁]</text>
+  <text x="170" y="126" font-size="15" fill="#666" font-family="sans-serif">   [x₂]</text>
+
+  <!-- = -->
+  <text x="230" y="110" font-size="15" fill="#666" font-family="sans-serif">=</text>
+
+  <!-- First product: Ax -->
+  <text x="268" y="72" font-size="11" fill="#888" font-family="sans-serif" text-anchor="middle">Ax</text>
+  <rect x="254" y="80" width="30" height="52" rx="3" fill="#f0f4ff" stroke="#2b7" stroke-width="1.2"/>
+  <text x="260" y="102" font-size="14" fill="#2b7" font-family="serif">a₁₁x₁</text>
+  <text x="256" y="118" font-size="14" fill="#e77" font-family="serif">+a₁₂x₂</text>
+  <rect x="286" y="80" width="30" height="52" rx="3" fill="#fff0f0" stroke="#e77" stroke-width="1.2"/>
+  <text x="292" y="102" font-size="14" fill="#e77" font-family="serif">a₁₂x₁</text>
+  <text x="288" y="118" font-size="14" fill="#2b7" font-family="serif">+a₂₂x₂</text>
+
+  <!-- ② xᵀ × (Ax) -->
+  <text x="340" y="62" font-size="13" fill="#444" font-family="sans-serif" font-weight="bold">②</text>
+
+  <text x="360" y="100" font-size="14" fill="#666" font-family="sans-serif">[x₁  x₂] ×</text>
+
+  <!-- 虚线框 -->
+  <rect x="344" y="78" width="66" height="56" rx="2" fill="none" stroke="#888" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <!-- = -->
+  <text x="430" y="100" font-size="15" fill="#666" font-family="sans-serif">=</text>
+
+  <!-- ③ Final expansion -->
+  <text x="455" y="62" font-size="13" fill="#444" font-family="sans-serif" font-weight="bold">③</text>
+
+  <!-- Term boxes -->
+  <rect x="448" y="72" width="100" height="22" rx="3" fill="#e6f4ea" stroke="#2b7" stroke-width="1"/>
+  <text x="498" y="87" font-size="14" fill="#2b7" font-family="serif" text-anchor="middle">x₁·a₁₁x₁ = a₁₁x₁²</text>
+
+  <rect x="448" y="98" width="100" height="22" rx="3" fill="#fef0e0" stroke="#e77" stroke-width="1"/>
+  <text x="498" y="113" font-size="14" fill="#e77" font-family="serif" text-anchor="middle">x₁·a₁₂x₂ = a₁₂x₁x₂</text>
+
+  <rect x="448" y="124" width="100" height="22" rx="3" fill="#fef0e0" stroke="#e77" stroke-width="1"/>
+  <text x="498" y="139" font-size="14" fill="#e77" font-family="serif" text-anchor="middle">x₂·a₁₂x₁ = a₁₂x₁x₂</text>
+
+  <rect x="448" y="150" width="100" height="22" rx="3" fill="#e6f4ea" stroke="#2b7" stroke-width="1"/>
+  <text x="498" y="165" font-size="14" fill="#2b7" font-family="serif" text-anchor="middle">x₂·a₂₂x₂ = a₂₂x₂²</text>
+
+  <!-- Brackets -->
+  <line x1="445" y1="95" x2="445" y2="155" stroke="#e77" stroke-width="2.5"/>
+  <text x="438" y="128" font-size="12" fill="#e77" font-family="sans-serif">}</text>
+
+  <!-- ==== 下半: 合并 ==== -->
+
+  <line x1="20" y1="190" x2="540" y2="190" stroke="#ddd" stroke-width="1"/>
+
+  <text x="20" y="215" font-size="13" fill="#444" font-family="sans-serif" font-weight="bold">合并:</text>
+
+  <!-- Two copies of a₁₂x₁x₂ merge into 2a₁₂x₁x₂ -->
+  <rect x="100" y="200" width="130" height="28" rx="3" fill="#fef0e0" stroke="#e77" stroke-width="1.2"/>
+  <text x="165" y="219" font-size="14" fill="#e77" font-family="serif" text-anchor="middle">a₁₂x₁x₂ + a₁₂x₁x₂</text>
+
+  <text x="255" y="219" font-size="18" fill="#444" font-family="sans-serif">→</text>
+
+  <rect x="290" y="198" width="100" height="32" rx="4" fill="#ffe0e0" stroke="#d44" stroke-width="2"/>
+  <text x="340" y="220" font-size="16" fill="#d44" font-family="serif" text-anchor="middle" font-weight="bold">2a₁₂x₁x₂</text>
+
+  <text x="415" y="219" font-size="13" fill="#888" font-family="sans-serif">(两个 a₁₂ 加起来)</text>
+
+  <!-- Final expression -->
+  <rect x="30" y="252" width="500" height="36" rx="5" fill="#e8f5e9" stroke="#2b7" stroke-width="1.5"/>
+  <text x="280" y="275" font-size="16" fill="#2b7" font-family="serif" text-anchor="middle" font-weight="bold">
+    xᵀAx = a₁₁x₁² + a₂₂x₂² + 2a₁₂x₁x₂
+  </text>
+
+  <!-- Key rule at bottom -->
+  <rect x="30" y="300" width="500" height="26" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="280" y="318" font-size="13" fill="#856404" font-family="sans-serif" text-anchor="middle" font-weight="bold">
+    ⚠ 规则：原式 xᵢxⱼ 的系数 ÷ 2 = 矩阵的 aᵢⱼ（因为展开时 aᵢⱼ 和 aⱼᵢ 会合并成 2 倍）
+  </text>
+</svg>

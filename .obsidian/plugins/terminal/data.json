@@ -50,6 +50,26 @@
       "shift": false
     },
     {
+      "action": "ignore",
+      "actionArg": null,
+      "alt": false,
+      "ctrl": true,
+      "key": "C",
+      "meta": false,
+      "platform": null,
+      "shift": true
+    },
+    {
+      "action": "ignore",
+      "actionArg": null,
+      "alt": false,
+      "ctrl": true,
+      "key": "V",
+      "meta": false,
+      "platform": null,
+      "shift": true
+    },
+    {
       "action": "scrollToBottom",
       "actionArg": null,
       "alt": false,
