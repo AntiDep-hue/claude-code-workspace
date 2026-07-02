@@ -1,0 +1,26 @@
+{
+  "skill_name": "math-vault",
+  "evals": [
+    {
+      "id": 1,
+      "name": "pdf-section-to-note",
+      "prompt": "我有本《线性代数应该这样学》第四版中译本的 PDF,在 C:\\Users\\18314\\Documents\\xwechat_files\\wxid_g5lqg2z6rdm222_55f0\\msg\\file\\2026-06\\LADR4eCN.pdf。帮我把 1C 子空间这一节做成 Obsidian 知识库笔记,要深度理解型的、几何直觉那种,公式用 LaTeX。",
+      "expected_output": "一篇 1C 子空间的 markdown 笔记,frontmatter 含 tags/book/section;按小节模板组织(本节地图/动机切入/定义/性质/例子/易错点/双链/自测);几何直觉自然写在定义前但不点破手法、不提风格来源;LaTeX 公式 $$ 包裹;配 SVG 图;双链用 [[小节号 小节名]];内容 100% 来自 PDF 不编造",
+      "files": ["C:\\Users\\18314\\Documents\\xwechat_files\\wxid_g5lqg2z6rdm222_55f0\\msg\\file\\2026-06\\LADR4eCN.pdf"]
+    },
+    {
+      "id": 2,
+      "name": "pasted-text-to-note",
+      "prompt": "把下面这段教材内容整理成知识库笔记(深度理解型,LaTeX):\n\n定义(群)。设 G 是一个非空集合,其上有一个二元运算 *,若满足:(1)结合律:对任意 a,b,c∈G,有 (a*b)*c=a*(b*c);(2)存在单位元 e∈G,使对任意 a∈G 有 e*a=a*e=a;(3)每个 a∈G 存在逆元 a⁻¹∈G,使 a*a⁻¹=a⁻¹*a=e。则称 (G,*) 为一个群。若还满足交换律 a*b=b*a,则称为交换群(阿贝尔群)。",
+      "expected_output": "一篇关于群定义的深度理解型笔记;动机/直觉先于形式定义但不点破;群公理用 LaTeX 规范表达;讲清为什么这样定义、各公理的意义;含易错点和自测;若无几何图可省略或用集合/对称示意;内容忠于所给文字不编造",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "trigger-and-pace",
+      "prompt": "我想把这本微积分教材做成一套 Obsidian 笔记,系统复习用。书有十几章,你打算怎么帮我弄?",
+      "expected_output": "应触发 math-vault skill;回应中体现:确认输入(书在哪/学科/书名)、按小节切分的粒度建议、先做一节给用户看效果再批量推进的节奏建议;不应一上来闷头开做",
+      "files": []
+    }
+  ]
+}
